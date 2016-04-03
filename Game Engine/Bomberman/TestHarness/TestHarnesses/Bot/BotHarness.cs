@@ -63,7 +63,9 @@ namespace TestHarness.TestHarnesses.Bot
         {
             WriteRoundFiles(gameState);
             _botRunner.CalibrateBot();
+            RemoveMoveFile();//Remove the move file created by calibration bots
             NewRoundStarted(gameState);
+            WriteRoundFiles(gameState);
         }
 
         public override void NewRoundStarted(GameMap gameState)
@@ -159,6 +161,14 @@ namespace TestHarness.TestHarnesses.Bot
                 File.Delete(dir);
 
             dir = Path.Combine(PreviousWorkingDirectory, Settings.Default.MapFileName);
+
+            if (File.Exists(dir))
+                File.Delete(dir);
+        }
+
+        private void RemoveMoveFile()
+        {
+            var dir = Path.Combine(CurrentWorkingDirectory, Settings.Default.BotMoveFileName);
 
             if (File.Exists(dir))
                 File.Delete(dir);

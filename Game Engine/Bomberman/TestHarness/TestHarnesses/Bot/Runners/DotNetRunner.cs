@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Domain.Meta;
 using TestHarness.Util;
 
 namespace TestHarness.TestHarnesses.Bot.Runners
@@ -27,7 +28,7 @@ namespace TestHarness.TestHarnesses.Bot.Runners
         protected override void RunCalibrationTest()
         {
             var calibrationExe = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                @"Calibrations" + Path.DirectorySeparatorChar + "BotCalibrationDotNet.exe");
+                @"Calibrations" + Path.DirectorySeparatorChar + GetCalibrarionExe());
             var processArgs =
                 String.Format("{0} \"{1}\"", ParentHarness.PlayerEntity.Key, ParentHarness.CurrentWorkingDirectory);
 
@@ -45,6 +46,21 @@ namespace TestHarness.TestHarnesses.Bot.Runners
         private string ConvertProcessArgs(string processName, string args)
         {
             return Environment.OSVersion.Platform == PlatformID.Unix ? processName + " " + args : args;
+        }
+
+        private string GetCalibrarionExe()
+        {
+            switch (ParentHarness.BotMeta.BotType)
+            {
+                case BotMeta.BotTypes.CPlusPlus:
+                    return "BotCalibrationCPlusPlus.exe";
+                case BotMeta.BotTypes.FSharp:
+                    return "BotCalibrationFSharp.exe";
+                    case BotMeta.BotTypes.CSharp:
+                default:
+                        return "BotCalibrationDotNet.exe";
+            }
+            
         }
     }
 }
