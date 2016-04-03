@@ -5,6 +5,7 @@ The current release is version 1.0.0.
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
 In this project you will find everything you need to build and run a bot on your local machine.  This project contains the following:
+
 1. Game Engine - The game engine is responsible for running matches between players.
 2. Sample Bots - Sample bots can be used a starting point for your bot.
 3. Reference Bot - The reference bot contains some AI logic that will play the game based on predefined rules.  You can use this to play against your bot for testing purposes.
@@ -25,9 +26,7 @@ Once you have installed .NET and downloaded the binary release zip file, extract
 We have included the reference bot in the binaries version folder, so at this point you can simply run the Run.bat to see the bots play a match.
 
 Once you have written your own bot you can you can use the command line arguments to specify the bots that should be run. You can see the available command line arguments by running `Bomberman.exe --help`:
-```powershell
-SpaceInvadersDuel 1.0.6.0                                                     
-Copyright c Microsoft 2015                                                    
+```powershell                                              
                                                                               
   -b, --bot         (Default: Empty String Array) Relative path to the folder containing
                      the bot player.  You can add multiple bots by separating each with a space.       
@@ -141,8 +140,8 @@ Players can either be consol players or bots.  Both follow the same game engine 
   2. Bots will not be allowed to exceed a total processor time of 2 seconds
   3. Bots processes will run with elevated processor priority. (For this reason the game has to be run with administrator privileges)
   4. Calibrations will be done at the start of a game to determine additional processor time.  So if the calibration bot takes 200ms to read the files and make a move descision then your bot will be allowed an additional 200ms to complete.
-7. Malfunctioning bots or bots that exceed their time limit will send back a do nothing command.
-8. Bot players that post more than 20 do nothing commands in a row will automatically place a bomb to kill themselves in an attempt to save the game
+  5. Malfunctioning bots or bots that exceed their time limit will send back a do nothing command.
+  6. Bot players that post more than 20 do nothing commands in a row will automatically place a bomb to kill themselves in an attempt to save the game
 
 ### Game Engine Rules
 
@@ -210,7 +209,7 @@ Players will collect points during game play.  Points will be used (along with o
 1. Players will receive 10 points for destroying destructible walls.
   1. If two bombs hit the same wall, both players will receive 10 points for destroying the wall.  Unless the wall was destroyed as result of a chain explosion.
 2. Players will receive points for killing another player based on the following equation (100 + (Max point per map for destructible walls / players on map)).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
-  1. If two bombs hit the another player, both players will receive points for killing the player.  Unless the player was killed as result of chain explosion.
+  1. If two bombs hit another player, both players will receive points for killing the player.  Unless the player was killed as result of chain explosion.
 3. Players will receive points based on map coverage:
   1. Points will only be calculated for each new block touched by a player.
   2. Points will determine player coverage on the map, with a map coverage of 100% giving the player 100 points.
