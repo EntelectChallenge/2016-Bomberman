@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09F278FC-D8A3-46EE-8F66-4F37CD804B50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestHarness</RootNamespace>
+    <AssemblyName>TestHarness</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\TimeLimitExceededException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TestHarnesses\Bot\BotCompiler.cs" />
+    <Compile Include="TestHarnesses\Bot\BotHarness.cs" />
+    <Compile Include="TestHarnesses\Bot\BotRunner.cs" />
+    <Compile Include="TestHarnesses\Bot\Compilers\DotNetCompiler.cs" />
+    <Compile Include="TestHarnesses\Bot\Compilers\JavaCompiler.cs" />
+    <Compile Include="TestHarnesses\Bot\Compilers\JavaScriptCompiler.cs" />
+    <Compile Include="TestHarnesses\Bot\Compilers\PythonCompiler.cs" />
+    <Compile Include="TestHarnesses\Bot\ICompiler.cs" />
+    <Compile Include="TestHarnesses\Bot\Runners\DotNetRunner.cs" />
+    <Compile Include="TestHarnesses\Bot\Runners\JavaRunner.cs" />
+    <Compile Include="TestHarnesses\Bot\Runners\JavaScriptRunner.cs" />
+    <Compile Include="TestHarnesses\Bot\Runners\PythonRunner.cs" />
+    <Compile Include="TestHarnesses\ConsoleHarness\ConsoleHarness.cs" />
+    <Compile Include="TestHarnesses\SocketHarness\SocketHarnessMessage.cs" />
+    <Compile Include="TestHarnesses\SocketHarness\SocketState.cs" />
+    <Compile Include="Util\BotMetaReader.cs" />
+    <Compile Include="Util\ChangeErrorMode.cs" />
+    <Compile Include="Util\ProcessHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{0b207fc6-09e8-455a-ad44-f0c80966ed7d}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameEngine\GameEngine.csproj">
+      <Project>{ac79217a-92f4-4b19-a13b-c72db278253c}</Project>
+      <Name>GameEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calibrations\BotCalibrationJava.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Calibrations\BotCalibrationDotNet.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

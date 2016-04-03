@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using GameEngine.Loggers;
+using TestHarness.Properties;
+
+namespace TestHarness.Util
+{
+    public class ProcessHandler : IDisposable
+    {
+        private readonly Process _processToRun;
+        private readonly ILogger _logger;
+
+        public bool LimitExecutionTime { get; set; }
+
+        public ProcessHandler(string workDir, string processName, string processArgs, ILogger logger) :
+		this(workDir, processName, processArgs, logger, false)
+        {
+        }
+
+        public ProcessHandler(string workDir, string processName, string processArgs, ILogger logger, bool isMono)
+        {
+            _logger = logger;
+            _processToRun = CreateProcess(workDir, processName, processArgs, isMono);
+            LimitExecutionTime = false;
+        }
+
+        public Process ProcessToRun
+        {
+            get { return _processToRun; }
+        }
+
+        private Process CreateProcess(string workDir, string processName, string processArgs, bool isMono)
+        {
+            var process = new Process()
+            {
+                StartInfo =
+                {
+                    WorkingDirectory = workDir,
+                    FileName = Environment.OSVersion.Platform == PlatformID.Unix && !isMono ? "/bin/bash " : processName,
+                    Arguments =
+						Environment.OSVersion.Platform == PlatformID.Unix && !isMono ? processName + " " + processArgs : processArgs,
+                    CreateNoWindow = true,
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    ErrorDialog = false,
+                    StandardErrorEncoding = Encoding.UTF8,
+                    StandardOutputEncoding = Encoding.UTF8
+                }
+            };
+
+            return process;
+        }
+
+        public int RunProcess()
+        {
+            if (Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX)
+            {
+                return StartProcessCommon();
+            }
+            
+            using (
+                var newErrorMode =
+                    new ChangeErrorMode(ChangeErrorMode.ErrorModes.FailCriticalErrors |
+                                        ChangeErrorMode.ErrorModes.NoGpFaultErrorBox))
+            {
+                return StartProcessCommon();
+            }
+        }
+
+        private int StartProcessCommon()
+        {
+            _logger.LogInfo("Executing process " + _processToRun.StartInfo.FileName + " " + _processToRun.StartInfo.Arguments);
+            _processToRun.EnableRaisingEvents = true;
+            _processToRun.Start();
+            _processToRun.BeginOutputReadLine();
+            _processToRun.BeginErrorReadLine();
+            _processToRun.PriorityClass = ProcessPriorityClass.AboveNormal;
+
+            if (LimitExecutionTime) _processToRun.WaitForExit(TimeSpan.FromSeconds(Settings.Default.MaxBotRuntimeSeconds * 2).Milliseconds);
+            
+            //Ensure that all output events have been written before resuming with the main thread
+            _processToRun.WaitForExit();
+
+            return _processToRun.ExitCode;
+        }
+
+        public void Dispose()
+        {
+            if(_processToRun != null)
+                _processToRun.Dispose();
+        }
+    }
+}

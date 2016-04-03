@@ -1,0 +1,8 @@
+{
+	"Author":"John Doe",
+    "Email":"john.doe@example.com",
+    "NickName" :"John",
+    "BotType": 0,
+    "ProjectLocation" : "",
+    "RunFile" : "Reference\\bin\\Debug\\Reference.exe"
+}

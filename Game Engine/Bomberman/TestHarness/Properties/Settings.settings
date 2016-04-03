@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestHarness.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PathToMSBuild" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild.exe</Value>
+    </Setting>
+    <Setting Name="PathToMaven" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mvn.bat</Value>
+    </Setting>
+    <Setting Name="PathToJava" Type="System.String" Scope="User">
+      <Value Profile="(Default)">java</Value>
+    </Setting>
+    <Setting Name="PathToNode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">node.exe</Value>
+    </Setting>
+    <Setting Name="PathToPython2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">python.exe</Value>
+    </Setting>
+    <Setting Name="PathToPython3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">python.exe</Value>
+    </Setting>
+    <Setting Name="PathToPythonPackageIndex" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pip</Value>
+    </Setting>
+    <Setting Name="PathToNpm" Type="System.String" Scope="User">
+      <Value Profile="(Default)">X:\NodeJS\npm.cmd</Value>
+    </Setting>
+    <Setting Name="StateFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">state.json</Value>
+    </Setting>
+    <Setting Name="MapFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">map.txt</Value>
+    </Setting>
+    <Setting Name="LogFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">log.txt</Value>
+    </Setting>
+    <Setting Name="BotMetaFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bot.json</Value>
+    </Setting>
+    <Setting Name="MaxBotRuntimeSeconds" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="BotMoveFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">move.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
