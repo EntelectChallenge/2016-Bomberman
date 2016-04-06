@@ -139,6 +139,22 @@ We have written a number of automated tests to ensure that the game logic and ru
 
 If you add a new feature you should add tests to cover it.
 
+## Just For Fun
+
+So doing your own little Turing test by playing against your own bot in the console to determine if it is going to turn into the next Skynet is fun and all, but what if you just want to take a break from it all?
+
+That is where the `Network (Console)` comes in.  Invite some of your friends over or have some fun at the office during lunch time and play against some real human competitors.  In the `Network (Console)` folder there are two sub folders, the `Host` and the `Client`.  Start the `Host/SocketHost.exe` and wait for the clients to connect.  Each of your friends, and you, should then launch a new `Client/BomberManSocketClient.exe`
+
+The socket client will ask for a hostname, which should be your computer name (the host).  Then each player will get a change to enter a user name.  Once all of the players have connected, type in start into the host and press enter.  May the best player win!
+
+The game engine supports 2 to 12 players.
+
+Disclaimer:  This feature was developed purely for fun, and will most likely crash from time to time.  Here are some tips if that happens
+1. Make sure you have only one network interface active to bind on
+2. Make sure that port 19010 is available for binding on your system
+3. Make sure the clients enter your computer name as it is registered on the network (IP Address might also work, but not always)
+4. Client players will connect to the host on ports 20001 - 20013
+
 ## Release Notes
 
 ### Version 1.0.0 - 11 April 2016
