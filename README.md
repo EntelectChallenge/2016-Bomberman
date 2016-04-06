@@ -103,6 +103,7 @@ The following package managers are supported by the game engine:
 * Python - Python Package Index.  (Requires that the project contains a requirements.txt file in the project location path)
 
 Your bot will receive two arguments when the for every round in the game:
+
 1. Your player key register in the game
 2. The directory for the current game files
 
