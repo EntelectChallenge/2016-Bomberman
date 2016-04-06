@@ -94,7 +94,7 @@ The game engine requires that you have `bot.json` file.  This will tell the game
 6. Run File - This is the main entry point file for your bot that will be executed to play the game.
   * Java user have to ensure that the main class is specified in the manifest file
 
-The game engine might in some scenarios limit the total memory allocation for some bots depending on the bot type.
+The game engine might set additional runtime parameter in some scenarios, for instance specifying minimum memory allocation for java bots.
 
 The following package managers are supported by the game engine:
 * Microsoft Languages - Nuget.  (Requires the nuget.exe to be present in the project location path)
