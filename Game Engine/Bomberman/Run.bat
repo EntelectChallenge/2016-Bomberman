@@ -1,2 +1,2 @@
-Bomberman.exe -c 1 -b "W:\Projects\100k\2016\Source\Sample Bots\C#\SampleBot"
+Bomberman.exe --pretty -b "../Reference Bot" "../Reference Bot" "../Reference Bot" "../Reference Bot" 
 pause

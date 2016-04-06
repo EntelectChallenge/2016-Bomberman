@@ -18,10 +18,11 @@ namespace GameEngine.Engine
 {
     public class BombermanEngine : ILogger
     {
+        public delegate void GameStartedHandler(GameMap gameMap);
         public delegate void RoundCompleteHandler(GameMap gameMap, int round);
-
         public delegate void GameCompleteHandler(GameMap gameMap, List<Player> leaderBoard);
-        
+
+        public event GameStartedHandler GameStarted;
         public event RoundCompleteHandler RoundComplete;
         public event GameCompleteHandler GameComplete;
 
@@ -98,6 +99,8 @@ namespace GameEngine.Engine
 
             StartNewRound();
 
+            PublishGameStarted();
+
             foreach (var player in _players)
             {
                 player.StartGame(_gameMap);
@@ -157,6 +160,15 @@ namespace GameEngine.Engine
                 RoundComplete(_gameMap, _currentRound);
         }
 
+        /// <summary>
+        /// Notify all listeners that the current game round has started
+        /// </summary>
+        private void PublishGameStarted()
+        {
+            if (GameStarted != null)
+                GameStarted(_gameMap);
+        }
+
         private void PublishGameComplete()
         {
             LogInfo("Game has ended, the winnig player is" + (Winner == null ? "no one, game ended in a draw" : Winner.Name));
@@ -187,8 +199,8 @@ namespace GameEngine.Engine
                 player.RoundComplete(_gameMap, _currentRound);
             }
 
-            StartNewRound();
             PublishRoundComplete();
+            StartNewRound();
 
             if (_gameMap.RegisteredPlayerEntities.Count(x => !x.Killed) < 2)
             {
@@ -216,7 +228,7 @@ namespace GameEngine.Engine
             }
 
             _currentRound++;
-            _roundProcessor = new GameRoundProcessor(_currentRound, _gameMap, this, _playerKillPoints);
+            _roundProcessor = new GameRoundProcessor(_currentRound, _gameMap, Logger, _playerKillPoints);
             _gameMap.CurrentRound = _currentRound;
         }
 

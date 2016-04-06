@@ -27,7 +27,11 @@ namespace TestHarness.TestHarnesses.ConsoleHarness
         {
             ConsoleRender.RenderToConsolePretty(gameState, playerKey);
 
-            System.Console.WriteLine("Movement for player " + Name);
+            Console.WriteLine("To move, type a,w,s,d and press enter");
+            Console.WriteLine("To plant a bomb, type z and enter");
+            Console.WriteLine("You can reduce the bomb timer to 1 using x");
+            Console.WriteLine();
+            Console.WriteLine("Movement for player " + Name);
             var line = System.Console.ReadLine();
 
             if (line == "w")

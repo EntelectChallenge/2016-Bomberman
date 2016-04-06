@@ -28,15 +28,22 @@ namespace BomberManSocketClient
                 Socket = socket
             };
 
-            socket.BeginConnect(ipHost.AddressList.Last(x => x.AddressFamily == AddressFamily.InterNetwork), 19010, RegisterCallback, state);
+            var endpoint = ipHost.AddressList.Last(x => x.AddressFamily == AddressFamily.InterNetwork);
+            socket.BeginConnect(endpoint, 19010, RegisterCallback, state);
         }
 
         public static void Main(string[] args)
+        {
+            Start();
+        }
+
+        private static void Start()
         {
             Console.WriteLine("Please Enter Host Name");
             var hostname = Console.ReadLine();
             Console.WriteLine("Please Enter Player Name");
             var username = Console.ReadLine();
+
 
             using (var socketClient = new SocketClient(hostname, username))
             {
@@ -53,7 +60,7 @@ namespace BomberManSocketClient
 
         private void RegisterCallback(IAsyncResult ar)
         {
-            var state = (SocketState) ar.AsyncState;
+            var state = (SocketState)ar.AsyncState;
             var socket = state.Socket;
 
             state.ByteBuffer = new byte[10240];
@@ -72,7 +79,7 @@ namespace BomberManSocketClient
 
             switch (message.MessageType)
             {
-                    case SocketHarnessMessage.MessageType.RegistrationPort:
+                case SocketHarnessMessage.MessageType.RegistrationPort:
                     port = Int32.Parse(message.Message);
                     break;
                 default:
@@ -100,14 +107,14 @@ namespace BomberManSocketClient
             Console.WriteLine("Please wait while the others connect and the game is started.");
             Console.WriteLine("To move, type a,w,s,d and press enter");
             Console.WriteLine("To plant a bomb, type z and enter");
-            Console.WriteLine("You can reduce the bomb timer to 1 using x (Bomb timer has to be <= 4)");
+            Console.WriteLine("You can reduce the bomb timer to 1 using x");
         }
 
         private void GameSocketConnected(IAsyncResult ar)
         {
             try
             {
-                var state = (SocketState) ar.AsyncState;
+                var state = (SocketState)ar.AsyncState;
                 var socket = state.Socket;
 
                 socket.BeginReceive(state.ByteBuffer, 0, state.ByteBuffer.Length, SocketFlags.None, GameSocketMessage,
@@ -123,7 +130,7 @@ namespace BomberManSocketClient
         {
             try
             {
-                var state = (SocketState) ar.AsyncState;
+                var state = (SocketState)ar.AsyncState;
                 var socket = state.Socket;
 
                 var message = SocketHarnessMessage.ProcessMessage(ar);

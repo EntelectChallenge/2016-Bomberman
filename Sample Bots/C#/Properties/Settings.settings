@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SampleBot.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StateFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">state.json</Value>
+    </Setting>
+    <Setting Name="OutputFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">move.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

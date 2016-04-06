@@ -37,6 +37,7 @@ namespace Bomberman
                 if (options.Pretty)
                 {
                     _engine.RoundComplete += engine_RoundComplete;
+                    _engine.GameStarted += EngineOnGameStarted;
                 }
 
                 _runLocation = !String.IsNullOrEmpty(options.Log) ? options.Log : Path.Combine(_runLocation, gameSeed.ToString());
@@ -70,6 +71,11 @@ namespace Bomberman
             {
                 Console.WriteLine(ex);
             }
+        }
+
+        private void EngineOnGameStarted(GameMap gameMap)
+        {
+            ConsoleRender.RenderToConsolePretty(gameMap, 'Z');
         }
 
         void engine_RoundComplete(GameMap gameMap, int round)

@@ -4,13 +4,22 @@ The current release is version 1.0.0.
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
+## TL;DR
+
+1. Download the release files
+2. Build your bot
+4. Submit
+5. Win
+
+## Project Structure
+
 In this project you will find everything you need to build and run a bot on your local machine.  This project contains the following:
 
 1. Game Engine - The game engine is responsible for running matches between players.
 2. Sample Bots - Sample bots can be used a starting point for your bot.
 3. Reference Bot - The reference bot contains some AI logic that will play the game based on predefined rules.  You can use this to play against your bot for testing purposes.
-4. Calibration Bots - Calibration bots are used to calibrate the game engine when running bots to determine the amount of time a player bot is allowed to make a desision before the game engine kills it.
-5. Binaries - Binaries for the current version of the game.  The binaries can be used to run the game without having to compile it youself.
+4. Calibration Bots - Calibration bots are used to calibrate the game engine when running bots to determine the amount of time a player bot is allowed to make a decision before the game engine kills it.
+5. Binaries - Binaries for the current version of the game.  The binaries can be used to run the game without having to compile it your self.
 
 This project can be used to get a better understanding of the rules and to help debug your bot.
 
@@ -27,25 +36,25 @@ We have included the reference bot in the binaries version folder, so at this po
 
 Once you have written your own bot you can you can use the command line arguments to specify the bots that should be run. You can see the available command line arguments by running `Bomberman.exe --help`:
 ```powershell                                              
-                                                                              
+
   -b, --bot         (Default: Empty String Array) Relative path to the folder containing
                      the bot player.  You can add multiple bots by separating each with a space.       
-                                                                              
+
   -c, -console      (Default: 0) The amount of console players to add to the game.                      
-                                                                              
+
   -r, --rules        (Default: False) Prints out the rules and saves them in  
                      markdown format to rules.md                              
-                                                                              
+
   --clog        	(Default: False) Enables Console Logging.                                    
-                                                                              
+
   --pretty   		(Default: False) Draws the game map to console for every round instead of showing logs                                    
-                                                                              
+
   -l, --log          (Default: ) Relative path where you want the match replay
                      log files to be output (instead of the default           
                      Replays/{matchSeed}).                   
-                                                                              
+
   -s --seed        	(Default: Random) The game seed to use for map generation.                                 
-                                                                              
+
   --help             Display this help screen.                                
 ```
 
@@ -53,7 +62,9 @@ So for example you can do something like this to run your bot against the bundle
 
 You might have to change the configurate file depending on your system in order to run the game.  The configuration file is in the game engine folder called `Bomberman.exe.config`.  You can modify the file to update where the game engine looks for the various runtime executables such as the java runtime to use.  All paths have to be absolute (unless the executable is in the system path).
 
-## Bot Meta
+## Your Bot
+
+We have changed things a bit this year when it comes to compiling and running the bot.  You will not longer be able to include a run.bat and compile.bat file, the system will do that for you based on your bot meta you included.  One of the reasons we decided to go this route is in order to add additional features to the game engine for instance running calibration bots.
 
 The game engine requires that you have `bot.json` file.  This will tell the game engine how to compile and run your bot.  The file must contain the following:
 
@@ -82,7 +93,7 @@ The game engine requires that you have `bot.json` file.  This will tell the game
 5. Project Location - The root location of the project file.  For instance in C# solutions, that will point to folder containing the solution (.sln) file.  This will be used for bot compilation when you submit your bot.
 6. Run File - This is the main entry point file for your bot that will be executed to play the game.
   * Java user have to ensure that the main class is specified in the manifest file
-  
+
 The game engine might in some scenarios limit the total memory allocation for some bots depending on the bot type.
 
 The following package managers are supported by the game engine:
@@ -91,6 +102,37 @@ The following package managers are supported by the game engine:
 * JavaScript - NPM.  (Requires that project contains a package.json file in the project location path)
 * Python - Python Package Index.  (Requires that the project contains a requirements.txt file in the project location path)
 
+Your bot will receive two arguments when the for every round in the game:
+1. Your player key register in the game
+2. The directory for the current game files
+
+The game will store game files during a match in the following directory format
+````
+...Replays/
+............Game seed/
+......................Round Number/
+...................................engine.log
+...................................map.txt
+...................................roundinfo.json
+...................................state.json
+...................................Player Key/
+..............................................log.txt
+..............................................map.txt
+..............................................state.json
+..............................................move.txt
+````
+
+Each player will have the `map.txt` and `state.json` files in their `Player Key` folder until they made their move using the `move.txt` file, after which the game engine will remove the state and map files to save some disk space.  The `map.txt` and `state.json` files in the `Round Number` folder is the same files that were placed in the player folders.
+
+The `engine.log` file contains information from the engine while processing the round.
+
+The `log.txt` file in the player file contains player specific logs, such as the console output from player bots.  If your bot is misbehaving this should be the first place to go have a look.  In this file you can also view additional information such as bot run time and bot processor time.
+
+The `round.info` folder is mainly for GUI submissions, and reports player stats and the leaderboard.
+
+In order to help with bot calibrations and to speed up things a bit to give your bot the best possible chance at winning we are going to look into the possibility of running each match from a ram disk this year, provided the hardware specs allow for it without affecting bot performance.  Keep an eye on the forum to see what our decision will be regarding this.
+
+The rules for the game are further down.
 
 ### Tests
 We have written a number of automated tests to ensure that the game logic and rules have been implemented correctly - if you make any changes to the test harness you should run the tests to ensure that everything is still working correctly before submitting a pull request.
@@ -110,12 +152,12 @@ The maps in the game will be generated randomly based on seed provided to the ga
 
 1. The map will be surrounded with indestructible walls
 2. The default map size for 2-4 players will be 21x21 blocks
-3. Every second square, starting from the outer boundary, will be an indestructible wall.  The only exception to this rule will be the centre block on the map.
+3. Every second square, starting from the outer boundary, will be an indestructible wall.  The only exception to this rule will be the center block on the map.
 4. Each quadrant will be generated such that the entire map will be symmetrical, with each quadrant appearing the same from each users perspective.
 5. Players will always be placed in a corner of the map.  In case the map contains more than 4 players, the remaining players be placed equidistant from the other players along the sides of the map.
 6. Every player on the map will have a 2 block safe zone horizontally and vertically.
-7. The centre of the map will always contain a Super power up in the centre, in place of the indestructible wall.
-8. The centre power up will always be surrounded by a 5x5 area of destructible walls.
+7. The center of the map will always contain a Super power up in the center, in place of the indestructible wall.
+8. The center power up will always be surrounded by a 5x5 area of destructible walls.
 9. Power ups will be placed randomly across the map, with each quadrant of the map receiving the same amount and type of power ups.  When four players are present, a fairness algorithm will be applied to ensure players have the same chance of finding a power up within a certain distance from them.
 10. Power ups on the map will be determined with the following algorithm
   1. Two bomb bag power ups will be placed on the map per player.
@@ -124,7 +166,7 @@ The maps in the game will be generated randomly based on seed provided to the ga
 
 ### Player Rules
 
-Players can either be consol players or bots.  Both follow the same game engine rules.  When playing on Unity, the rules will follow the actual game as close as possible, with exceptions made for real time play.
+Players can either be console players or bots.  Both follow the same game engine rules.  When playing on Unity, the rules will follow the actual game as close as possible, with exceptions made for real time play.
 
 1. Players will only be able submit one command per round.  The game engine will reject any additional commands sent by the player.
 2. Only one of the following commands can be submitted by the player during a round:
@@ -139,7 +181,7 @@ Players can either be consol players or bots.  Both follow the same game engine 
   1. Bot processes will be terminated after 4 seconds
   2. Bots will not be allowed to exceed a total processor time of 2 seconds
   3. Bots processes will run with elevated processor priority. (For this reason the game has to be run with administrator privileges)
-  4. Calibrations will be done at the start of a game to determine additional processor time.  So if the calibration bot takes 200ms to read the files and make a move descision then your bot will be allowed an additional 200ms to complete.
+  4. Calibrations will be done at the start of a game to determine additional processor time.  So if the calibration bot takes 200ms to read the files and make a move decision then your bot will be allowed an additional 200ms to complete.
   5. Malfunctioning bots or bots that exceed their time limit will send back a do nothing command.
   6. Bot players that post more than 20 do nothing commands in a row will automatically place a bomb to kill themselves in an attempt to save the game
 
@@ -214,5 +256,5 @@ Players will collect points during game play.  Points will be used (along with o
   1. Points will only be calculated for each new block touched by a player.
   2. Points will determine player coverage on the map, with a map coverage of 100% giving the player 100 points.
 4. Players obtaining the Super Power up will receive additional points.
-5. When multiple player bombs are triggered in a bomb chain, all players with bombs forming part of the chain will recieve the points for all entities destroyed in the chain.
+5. When multiple player bombs are triggered in a bomb chain, all players with bombs forming part of the chain will receive the points for all entities destroyed in the chain.
 6. The round in which a player is killed will cause the player to forfeit all points earned in that round, and the player will lose points equal to the points earned when killing another player.
