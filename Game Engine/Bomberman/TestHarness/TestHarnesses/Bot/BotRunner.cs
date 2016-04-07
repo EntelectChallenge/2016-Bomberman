@@ -49,9 +49,13 @@ namespace TestHarness.TestHarnesses.Bot
                     handler.ProcessToRun.OutputDataReceived += (sender, args) => ParentHarness.Logger.LogInfo("Output from bot: " + args.Data);
                     handler.ProcessToRun.ErrorDataReceived += (sender, args) => ParentHarness.Logger.LogException("Output from bot: " + args.Data);
                     ParentHarness.Logger.LogDebug(String.Format("Executing bot with following commands {0} {1}", handler.ProcessToRun.StartInfo.FileName, handler.ProcessToRun.StartInfo.Arguments));
-                    _botReturnCode = handler.RunProcess();
 
-                    ParentHarness.Logger.LogInfo("Your bots total processor time was " + handler.ProcessToRun.TotalProcessorTime);
+                    var sw = new Stopwatch();
+                    sw.Start();
+                    _botReturnCode = handler.RunProcess();
+                    sw.Stop();
+
+                    ParentHarness.Logger.LogInfo("Your bots total processor time was " + handler.ProcessToRun.TotalProcessorTime + " and total execution time was " + sw.Elapsed);
                 }
                 catch (Exception ex)
                 {
@@ -62,7 +66,7 @@ namespace TestHarness.TestHarnesses.Bot
                 if (handler.ProcessToRun.TotalProcessorTime >= MaxRunTime)
                 {
                     ParentHarness.Logger.LogInfo("Your bot exceeded the maximum processor time");
-                    throw new TimeLimitExceededException("Time limit exceeded by " + (handler.ProcessToRun.TotalProcessorTime - MaxRunTime) + " milliseconds");
+                    throw new TimeLimitExceededException("Time limit exceeded by " + (handler.ProcessToRun.TotalProcessorTime - MaxRunTime));
                 }
             }
         }

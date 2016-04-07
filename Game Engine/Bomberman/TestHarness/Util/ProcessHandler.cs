@@ -82,8 +82,15 @@ namespace TestHarness.Util
             _processToRun.BeginErrorReadLine();
             _processToRun.PriorityClass = ProcessPriorityClass.AboveNormal;
 
-            if (LimitExecutionTime) _processToRun.WaitForExit(TimeSpan.FromSeconds(Settings.Default.MaxBotRuntimeSeconds * 2).Milliseconds);
-            
+            _logger.LogInfo("Bot has " + (TimeSpan.FromSeconds(Settings.Default.MaxBotRuntimeSeconds * 2).TotalMilliseconds) + "ms to run");
+            var cleanExit = true;
+            if (LimitExecutionTime) cleanExit = _processToRun.WaitForExit((int) (TimeSpan.FromSeconds(Settings.Default.MaxBotRuntimeSeconds * 2).TotalMilliseconds));
+
+            if (!cleanExit)
+            {
+                _logger.LogInfo("Bot has been killed for taking to long to execute");
+                _processToRun.Kill();
+            }
             //Ensure that all output events have been written before resuming with the main thread
             _processToRun.WaitForExit();
 

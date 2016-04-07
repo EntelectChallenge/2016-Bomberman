@@ -84,6 +84,7 @@
     <Compile Include="Rules\RuleContainer.cs" />
     <Compile Include="Rules\RulePrinter.cs" />
     <Compile Include="Rules\RulePrinters\ConsolePrinter.cs" />
+    <Compile Include="Rules\RulePrinters\HtmlPrinter.cs" />
     <Compile Include="Rules\RulePrinters\MarkdownPrinter.cs" />
   </ItemGroup>
   <ItemGroup>

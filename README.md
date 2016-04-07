@@ -104,7 +104,7 @@ The following package managers are supported by the game engine:
 
 Your bot will receive two arguments when the for every round in the game:
 
-1. Your player key register in the game
+1. Your player key registered in the game
 2. The directory for the current game files
 
 The game will store game files during a match in the following directory format
@@ -151,6 +151,7 @@ The socket client will ask for a hostname, which should be your computer name (t
 The game engine supports 2 to 12 players.
 
 Disclaimer:  This feature was developed purely for fun, and will most likely crash from time to time.  Here are some tips if that happens
+
 1. Make sure you have only one network interface active to bind on
 2. Make sure that port 19010 is available for binding on your system
 3. Make sure the clients enter your computer name as it is registered on the network (IP Address might also work, but not always)

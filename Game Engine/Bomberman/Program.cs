@@ -38,6 +38,9 @@ namespace Bomberman
 
                     printer = new MarkdownPrinter(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules.md"));
                     printer.PrintRules(GameRules);
+
+                    printer = new HtmlPrinter(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules.html"));
+                    printer.PrintRules(GameRules);
                     return;
                 }
                 Console.WriteLine("Starting new game");
