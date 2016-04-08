@@ -95,6 +95,9 @@
     <Content Include="Calibrations\BotCalibrationFSharp.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Calibrations\BotCalibrationNode.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Calibrations\BotCalibrationPython.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

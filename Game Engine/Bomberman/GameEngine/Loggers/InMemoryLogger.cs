@@ -7,13 +7,14 @@ namespace GameEngine.Loggers
 {
     public class InMemoryLogger : ILogger
     {
+        private const String DateFormat = "dd-MM-yyyy HH:mm:ss:fff";
         private StringBuilder _stringBuilder = new StringBuilder();
 
         public void LogDebug(string message)
         {
             lock (_stringBuilder)
             {
-                _stringBuilder.AppendLine().Append("DEBUG: ").Append(message);
+                _stringBuilder.AppendLine().Append(DateTime.Now.ToString(DateFormat)).Append(" - D: \t").Append(message);
             }
         }
 
@@ -21,7 +22,7 @@ namespace GameEngine.Loggers
         {
             lock (_stringBuilder)
             {
-                _stringBuilder.AppendLine().Append("INFO: ").Append(message);
+                _stringBuilder.AppendLine().Append(DateTime.Now.ToString(DateFormat)).Append(" - I: \t").Append(message);
             }
         }
 
@@ -29,7 +30,7 @@ namespace GameEngine.Loggers
         {
             lock (_stringBuilder)
             {
-                _stringBuilder.AppendLine().Append("ERROR: ").Append(message);
+                _stringBuilder.AppendLine().Append(DateTime.Now.ToString(DateFormat)).Append(" - E: \t").Append(message);
             }
         }
 
@@ -37,7 +38,7 @@ namespace GameEngine.Loggers
         {
             lock (_stringBuilder)
             {
-                _stringBuilder.AppendLine().Append("ERROR: ").Append(ex);
+                _stringBuilder.AppendLine().Append(DateTime.Now.ToString(DateFormat)).Append(" - E: \t").Append(ex);
             }
         }
 
@@ -45,7 +46,7 @@ namespace GameEngine.Loggers
         {
             lock (_stringBuilder)
             {
-                _stringBuilder.AppendLine().Append("ERROR: ").Append(message).AppendLine(ex.ToString());
+                _stringBuilder.AppendLine().Append(DateTime.Now.ToString(DateFormat)).Append(" - E: \t").Append(message).AppendLine(ex.ToString());
             }
         }
 

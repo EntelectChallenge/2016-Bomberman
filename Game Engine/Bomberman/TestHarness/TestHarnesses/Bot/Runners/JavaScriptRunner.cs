@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using TestHarness.Properties;
@@ -22,6 +23,15 @@ namespace TestHarness.TestHarnesses.Bot.Runners
 
         protected override void RunCalibrationTest()
         {
+            var calibrationFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+               @"Calibrations" + Path.DirectorySeparatorChar + "BotCalibrationNode.js");
+            var processArgs = String.Format("{0} {1} \"{2}\"", calibrationFile,
+                ParentHarness.PlayerEntity.Key, ParentHarness.CurrentWorkingDirectory);
+
+            using (var handler = new ProcessHandler(AppDomain.CurrentDomain.BaseDirectory, Settings.Default.PathToNode, processArgs, ParentHarness.Logger))
+            {
+                handler.RunProcess();
+            }
         }
     }
 }
