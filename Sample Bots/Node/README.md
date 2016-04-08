@@ -19,4 +19,4 @@ Start making your bot smarter than just outputting random moves. Some basic idea
 * Set some goals for your bot like staying alive, killing enemies or just blowing up the map.
 
 ## Test
-To simplest way to test your bot is simply to run it against itself - you can do this from the command line with `Game\ Engine/BomberMan/bin/Debug/Bomberman.exe -b Sample\ Bots/Node/ Sample\ Bots/Node/ --pretty`.
+The simplest way to test your bot is simply to run it against itself - you can do this from the command line with `Game\ Engine/BomberMan/bin/Debug/Bomberman.exe -b Sample\ Bots/Node/ Sample\ Bots/Node/ --pretty`. If you have downloaded binary release your path to Bomberman.exe will be a bit different, but the principles remain the same.
