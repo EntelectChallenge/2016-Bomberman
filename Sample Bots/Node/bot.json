@@ -1,0 +1,8 @@
+{
+	"Author":"John Doe",
+    "Email":"john.doe@example.com",
+    "NickName" :"John",
+    "BotType": "JavaScript",
+    "ProjectLocation" : "",
+    "RunFile" : "index.js"
+}

@@ -1,0 +1,5967 @@
+﻿{
+    "RegisteredPlayerEntities": [
+        {
+            "Name": "John",
+            "Key": "A",
+            "Points": 0,
+            "Killed": false,
+            "BombBag": 1,
+            "BombRadius": 1,
+            "Location": {
+                "X": 2,
+                "Y": 2
+            }
+        },
+        {
+            "Name": "John",
+            "Key": "B",
+            "Points": 0,
+            "Killed": false,
+            "BombBag": 1,
+            "BombRadius": 1,
+            "Location": {
+                "X": 20,
+                "Y": 20
+            }
+        }
+    ],
+    "MapHeight": 21,
+    "MapWidth": 21,
+    "GameBlocks": [
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 2
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 4
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 18
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 20
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 1,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 1,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 2,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.PlayerEntity, Domain",
+                    "Name": "John",
+                    "Key": "A",
+                    "Points": 0,
+                    "Killed": false,
+                    "BombBag": 1,
+                    "BombRadius": 1,
+                    "Location": {
+                        "X": 2,
+                        "Y": 2
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 2,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 2,
+                        "Y": 20
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 2,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 2,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 3,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 3,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 4,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 4,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 4,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 4,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 4,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 4,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 4,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 2
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 5,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 5,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 6,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 6,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 6,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 7,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 7,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 8,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 8,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 4
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 18
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 9,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 9,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 4
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 18
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 10,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 10,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": {
+                    "$type": "Domain.Entities.PowerUps.SuperPowerUp, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 11
+                    }
+                },
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 11,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 11,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 4
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 18
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 12,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 12,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 4
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 18
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 13,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 13,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 14,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 14,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 15,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 15,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 16,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 16,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 16,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 20
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 17,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 17,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 18,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 18,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 18,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 18,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 18,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 18,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 18,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 19,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 19,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 20,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 20,
+                        "Y": 2
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.DestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 20,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": null,
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.PlayerEntity, Domain",
+                    "Name": "John",
+                    "Key": "B",
+                    "Points": 0,
+                    "Killed": false,
+                    "BombBag": 1,
+                    "BombRadius": 1,
+                    "Location": {
+                        "X": 20,
+                        "Y": 20
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 20,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 20,
+                    "Y": 21
+                }
+            }
+        ],
+        [
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 1
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 1
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 2
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 2
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 3
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 3
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 4
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 4
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 5
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 5
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 6
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 6
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 7
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 7
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 8
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 8
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 9
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 9
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 10
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 10
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 11
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 11
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 12
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 12
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 13
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 13
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 14
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 14
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 15
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 15
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 16
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 16
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 17
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 17
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 18
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 18
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 19
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 19
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 20
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 20
+                }
+            },
+            {
+                "Entity": {
+                    "$type": "Domain.Entities.IndestructibleWallEntity, Domain",
+                    "Location": {
+                        "X": 21,
+                        "Y": 21
+                    }
+                },
+                "Bomb": null,
+                "PowerUp": null,
+                "Exploding": false,
+                "Location": {
+                    "X": 21,
+                    "Y": 21
+                }
+            }
+        ]
+    ],
+    "MapSeed": 333058737
+}
