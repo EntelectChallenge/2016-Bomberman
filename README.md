@@ -133,7 +133,25 @@ The `round.info` folder is mainly for GUI submissions, and reports player stats 
 
 In order to help with bot calibrations and to speed up things a bit to give your bot the best possible chance at winning we are going to look into the possibility of running each match from a ram disk this year, provided the hardware specs allow for it without affecting bot performance.  Keep an eye on the forum to see what our decision will be regarding this.
 
-The rules for the game are further down.
+### Rules
+
+These are the simplified rules.  More in depth rules are further down.
+
+1. A player can only make one move during a round.
+2. A player can make one of the following moves:
+  1. Move Left - Moves on block left.
+  2. Move Right - Moves on block right.
+  3. Move Up - Moves one block up.
+  4. Move Down - Moves one block down.
+  5. Plant Bomb - Plants a bomb (If there are bombs in your bomb bag).
+  6. Trigger Bomb - Takes the bomb with the lowest count down and sets the countdown to 1.
+3. Bombs will destroy walls, kill players and trigger other bombs.
+4. A player can pick up power ups to increase their bomb bag and blast radius.
+5. Players will earn points for destroying walls, killing other players and "discovering" the game map by moving around.
+6. The game leaderboard will be determined as follows:
+  1. Players that are alive will be on top.
+  2. If multiple players alive when the max rounds have been reached the points will be used.
+  3. Players that have died will be sorted first on points, then based on the round they died.
 
 ### Tests
 We have written a number of automated tests to ensure that the game logic and rules have been implemented correctly - if you make any changes to the test harness you should run the tests to ensure that everything is still working correctly before submitting a pull request.
