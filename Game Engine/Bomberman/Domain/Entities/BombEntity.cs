@@ -31,7 +31,7 @@ namespace Domain.Entities
 
         public override string ToString()
         {
-            return String.Format("{0}(X:{1}, Y:{2}, Raduis:{3}, Timer:{4}, Owner:{5})", GetType().Name, Location.X, Location.Y, BombRadius, BombTimer, Owner.Key);
+            return String.Format("{0}(X:{1}, Y:{2}, Radius:{3}, Timer:{4}, Owner:{5})", GetType().Name, Location.X, Location.Y, BombRadius, BombTimer, Owner.Key);
         }
     }
 }
