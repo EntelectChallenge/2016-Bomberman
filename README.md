@@ -303,7 +303,7 @@ Players will collect points during game play.  Points will be used (along with o
 
 1. Players will receive 10 points for destroying destructible walls.
   1. If two bombs hit the same wall, both players will receive 10 points for destroying the wall.  Unless the wall was destroyed as result of a chain explosion.
-2. Players will receive points for killing another player based on the following equation (100 + (Max point per map for destructible walls / players on map)).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
+2. Players will receive points for killing another player based on the following equation ((100 + Max point per map for destructible walls) / players on map).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
   1. If two bombs hit another player, both players will receive points for killing the player.  Unless the player was killed as result of chain explosion.
 3. Players will receive points based on map coverage:
   1. Points will only be calculated for each new block touched by a player.
