@@ -28,7 +28,7 @@ Improvements and enhancements may be made to the game engine code over time, but
 The game engine has been made available to the community for peer review and bug fixes, so if you find any bugs or have any concerns, please e-mail challenge@entelect.co.za, discuss it with us on the [Challenge forum](http://forum.entelect.co.za/) or submit a pull request on Github.
 
 ## Usage
-The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/1.0.0/2016-Bomberman-1.0.0-Windows.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework 4.5.1 here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
+The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/v1.0.0/Game.Engine.v1.0.0.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework 4.5.1 here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
 
 Once you have installed .NET and downloaded the binary release zip file, extract it and open a new Command Prompt in the Binaries/{version}/Game Engine folder.
 
@@ -65,6 +65,8 @@ You might have to change the configurate file depending on your system in order 
 ## Your Bot
 
 We have changed things a bit this year when it comes to compiling and running the bot.  You will not longer be able to include a run.bat and compile.bat file, the system will do that for you based on your bot meta you included.  One of the reasons we decided to go this route is in order to add additional features to the game engine for instance running calibration bots.
+
+Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/v1.0.0/Sample.Bots.zip)
 
 The game engine requires that you have `bot.json` file.  This will tell the game engine how to compile and run your bot.  The file must contain the following:
 
@@ -133,14 +135,29 @@ The `round.info` folder is mainly for GUI submissions, and reports player stats 
 
 In order to help with bot calibrations and to speed up things a bit to give your bot the best possible chance at winning we are going to look into the possibility of running each match from a ram disk this year, provided the hardware specs allow for it without affecting bot performance.  Keep an eye on the forum to see what our decision will be regarding this.
 
+The `map.txt` file will use the following characters to represent the game state:
+```
+' ' - Empty game block
+'*' - Bomb explosion
+'A' - Player Key (This can be anything from A-L
+'a' - Player Key when player is on a bomb they planted (This can be anything from a-l)
+'#' - Indestructable wall
+'+' - Destructable wall
+'1' - Bomb (This shows the bomb countdown timer, so it can be anything from 1-9)
+'$' - Super power up
+'!' - Bomb Raduis power up
+'&' - Bomb Bag power up
+```
+The `map.txt` will also have sections underneath the map for each player to give more information about each player like the power up strength, and the locations and timers of bombs on the map.
+
 ### Rules
 
 These are the simplified rules.  More in depth rules are further down.
 
 1. A player can only make one move during a round.
 2. A player can make one of the following moves:
-  1. Move Left - Moves on block left.
-  2. Move Right - Moves on block right.
+  1. Move Left - Moves one block left.
+  2. Move Right - Moves one block right.
   3. Move Up - Moves one block up.
   4. Move Down - Moves one block down.
   5. Plant Bomb - Plants a bomb (If there are bombs in your bomb bag).
@@ -286,7 +303,7 @@ Players will collect points during game play.  Points will be used (along with o
 
 1. Players will receive 10 points for destroying destructible walls.
   1. If two bombs hit the same wall, both players will receive 10 points for destroying the wall.  Unless the wall was destroyed as result of a chain explosion.
-2. Players will receive points for killing another player based on the following equation (100 + (Max point per map for destructible walls / players on map)).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
+2. Players will receive points for killing another player based on the following equation ((100 + Max point per map for destructible walls) / players on map).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
   1. If two bombs hit another player, both players will receive points for killing the player.  Unless the player was killed as result of chain explosion.
 3. Players will receive points based on map coverage:
   1. Points will only be calculated for each new block touched by a player.
