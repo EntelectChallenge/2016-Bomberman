@@ -156,8 +156,8 @@ These are the simplified rules.  More in depth rules are further down.
 
 1. A player can only make one move during a round.
 2. A player can make one of the following moves:
-  1. Move Left - Moves on block left.
-  2. Move Right - Moves on block right.
+  1. Move Left - Moves one block left.
+  2. Move Right - Moves one block right.
   3. Move Up - Moves one block up.
   4. Move Down - Moves one block down.
   5. Plant Bomb - Plants a bomb (If there are bombs in your bomb bag).
