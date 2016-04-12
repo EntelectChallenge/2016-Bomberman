@@ -392,7 +392,7 @@ namespace GameEngine.Engine
             }
             if (destroyedEntity.GetType() == typeof(PlayerEntity))
             {
-                ownerBomb.Points += +_playerKillPoints;
+                ownerBomb.Points += _playerKillPoints;
                 return;
             } 
             if (destroyedEntity.GetType() == typeof(DestructibleWallEntity))

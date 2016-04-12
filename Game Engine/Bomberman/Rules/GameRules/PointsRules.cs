@@ -29,7 +29,7 @@ namespace Bomberman.Rules.GameRules
                         {new Rule("If two bombs hit the same wall, both players will receive 10 points for destroying the wall.  Unless the wall was destroyed as result of a chain explosion.")},
                     }
                 }},
-                {new Rule("Players will receive points for killing another player based on the following equation (100 + (Max point per map for destructible walls / players on map)).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.")
+                {new Rule("Players will receive points for killing another player based on the following equation ((100 + Max point per map for destructible walls) / players on map).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.")
                 {
                     SubRules = new List<Rule>()
                     {

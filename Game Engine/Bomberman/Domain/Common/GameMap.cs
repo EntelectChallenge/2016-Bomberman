@@ -29,6 +29,7 @@ namespace Domain.Common
         /// </summary>
         [JsonProperty]
         public IList<PlayerEntity> RegisteredPlayerEntities { get; private set; }
+        [JsonProperty]
         public int CurrentRound { get; set; }
 
         public GameMap(int width, int height, int mapSeed)
