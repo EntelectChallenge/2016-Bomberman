@@ -135,6 +135,21 @@ The `round.info` folder is mainly for GUI submissions, and reports player stats 
 
 In order to help with bot calibrations and to speed up things a bit to give your bot the best possible chance at winning we are going to look into the possibility of running each match from a ram disk this year, provided the hardware specs allow for it without affecting bot performance.  Keep an eye on the forum to see what our decision will be regarding this.
 
+The `map.txt` file will use the following characters to represent the game state:
+```
+' ' - Empty game block
+'*' - Bomb explosion
+'A' - Player Key (This can be anything from A-L
+'a' - Player Key when player is on a bomb they planted (This can be anything from a-l)
+'#' - Indestructable wall
+'+' - Destructable wall
+'1' - Bomb (This shows the bomb countdown timer, so it can be anything from 1-9)
+'$' - Super power up
+'!' - Bomb Raduis power up
+'&' - Bomb Bag power up
+```
+The `map.txt` will also have sections underneath the map for each player to give more information about each player like the power up strength, and the locations and timers of bombs on the map.
+
 ### Rules
 
 These are the simplified rules.  More in depth rules are further down.
