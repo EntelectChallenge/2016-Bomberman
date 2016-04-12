@@ -305,12 +305,16 @@ namespace GameEnginetest.Tests
             var player1 = _players[0];
             var player2 = _players[1];
 
+            _gameMap.GetBlockAtLocation(5, 1).SetEntity(new IndestructibleWallEntity());
+
             var block = _gameMap.GetBlockAtLocation(player2.PlayerEntity.Location.X, player2.PlayerEntity.Location.Y);
             block.SetEntity(null);
             for (var x = 1; x <= 5; x++)
             {
                 for (var y = 1; y <= 5; y++)
                 {
+                    if(x ==5 && y == 1)
+                        continue;
                     MovePlayerToLocation(player1, x, y);
                 }
             } 
@@ -321,6 +325,8 @@ namespace GameEnginetest.Tests
             {
                 for (var y = 1; y <= 5; y++)
                 {
+                    if (x == 5 && y == 1)
+                        continue;
                     MovePlayerToLocation(player2, x, y);
                 }
             }
