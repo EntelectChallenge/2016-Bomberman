@@ -28,10 +28,7 @@ namespace GameEngine.Renderers
 
         public StringBuilder RenderJsonGameState()
         {
-            return new StringBuilder(JsonConvert.SerializeObject(GameMap, minify ? Formatting.None : Formatting.Indented, new JsonSerializerSettings()
-            {
-                Binder = new EntityTypeNameHandling()
-            }));
+            return new StringBuilder(JsonConvert.SerializeObject(GameMap, minify ? Formatting.None : Formatting.Indented));
         }
 
         public virtual StringBuilder RenderTextGameState()
