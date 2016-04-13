@@ -135,14 +135,29 @@ The `round.info` folder is mainly for GUI submissions, and reports player stats 
 
 In order to help with bot calibrations and to speed up things a bit to give your bot the best possible chance at winning we are going to look into the possibility of running each match from a ram disk this year, provided the hardware specs allow for it without affecting bot performance.  Keep an eye on the forum to see what our decision will be regarding this.
 
+The `map.txt` file will use the following characters to represent the game state:
+```
+' ' - Empty game block
+'*' - Bomb explosion
+'A' - Player Key (This can be anything from A-L)
+'a' - Player Key when player is on a bomb they planted (This can be anything from a-l)
+'#' - Indestructable wall
+'+' - Destructable wall
+'1' - Bomb (This shows the bomb countdown timer, so it can be anything from 1-9)
+'$' - Super power up
+'!' - Bomb Radius power up
+'&' - Bomb Bag power up
+```
+The `map.txt` will also have sections underneath the map for each player to give more information about each player like the power up strength, and the locations and timers of bombs on the map.
+
 ### Rules
 
 These are the simplified rules.  More in depth rules are further down.
 
 1. A player can only make one move during a round.
 2. A player can make one of the following moves:
-  1. Move Left - Moves on block left.
-  2. Move Right - Moves on block right.
+  1. Move Left - Moves one block left.
+  2. Move Right - Moves one block right.
   3. Move Up - Moves one block up.
   4. Move Down - Moves one block down.
   5. Plant Bomb - Plants a bomb (If there are bombs in your bomb bag).
@@ -288,7 +303,7 @@ Players will collect points during game play.  Points will be used (along with o
 
 1. Players will receive 10 points for destroying destructible walls.
   1. If two bombs hit the same wall, both players will receive 10 points for destroying the wall.  Unless the wall was destroyed as result of a chain explosion.
-2. Players will receive points for killing another player based on the following equation (100 + (Max point per map for destructible walls / players on map)).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
+2. Players will receive points for killing another player based on the following equation ((100 + Max point per map for destructible walls) / players on map).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
   1. If two bombs hit another player, both players will receive points for killing the player.  Unless the player was killed as result of chain explosion.
 3. Players will receive points based on map coverage:
   1. Points will only be calculated for each new block touched by a player.
