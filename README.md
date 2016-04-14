@@ -237,6 +237,7 @@ Players can either be console players or bots.  Both follow the same game engine
   4. Calibrations will be done at the start of a game to determine additional processor time.  So if the calibration bot takes 200ms to read the files and make a move decision then your bot will be allowed an additional 200ms to complete.
   5. Malfunctioning bots or bots that exceed their time limit will send back a do nothing command.
   6. Bot players that post more than 20 do nothing commands in a row will automatically place a bomb to kill themselves in an attempt to save the game
+  7. Players must ensure that the bot process exits gracefully within the allotted time. No child processes will be allowed.
 
 ### Game Engine Rules
 
