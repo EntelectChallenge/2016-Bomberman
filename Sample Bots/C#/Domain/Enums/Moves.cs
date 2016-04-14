@@ -8,6 +8,7 @@ namespace SampleBot.Domain.Enums
 {
     enum Moves
     {
+        DoNothing = 0,
         MoveUp = 1,
         MoveLeft = 2,
         MoveRight = 3,
