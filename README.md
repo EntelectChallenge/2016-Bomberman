@@ -139,13 +139,13 @@ The `map.txt` file will use the following characters to represent the game state
 ```
 ' ' - Empty game block
 '*' - Bomb explosion
-'A' - Player Key (This can be anything from A-L
+'A' - Player Key (This can be anything from A-L)
 'a' - Player Key when player is on a bomb they planted (This can be anything from a-l)
 '#' - Indestructable wall
 '+' - Destructable wall
 '1' - Bomb (This shows the bomb countdown timer, so it can be anything from 1-9)
 '$' - Super power up
-'!' - Bomb Raduis power up
+'!' - Bomb Radius power up
 '&' - Bomb Bag power up
 ```
 The `map.txt` will also have sections underneath the map for each player to give more information about each player like the power up strength, and the locations and timers of bombs on the map.
@@ -237,6 +237,7 @@ Players can either be console players or bots.  Both follow the same game engine
   4. Calibrations will be done at the start of a game to determine additional processor time.  So if the calibration bot takes 200ms to read the files and make a move decision then your bot will be allowed an additional 200ms to complete.
   5. Malfunctioning bots or bots that exceed their time limit will send back a do nothing command.
   6. Bot players that post more than 20 do nothing commands in a row will automatically place a bomb to kill themselves in an attempt to save the game
+  7. Players must ensure that the bot process exits gracefully within the allotted time. No child processes will be allowed.
 
 ### Game Engine Rules
 

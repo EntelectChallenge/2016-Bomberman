@@ -40,9 +40,8 @@ namespace TestHarness.Util
                 StartInfo =
                 {
                     WorkingDirectory = workDir,
-                    FileName = Environment.OSVersion.Platform == PlatformID.Unix && !isMono ? "/bin/bash " : processName,
-                    Arguments =
-						Environment.OSVersion.Platform == PlatformID.Unix && !isMono ? processName + " " + processArgs : processArgs,
+                    FileName = processName,
+                    Arguments = processArgs,
                     CreateNoWindow = true,
                     WindowStyle = ProcessWindowStyle.Hidden,
                     UseShellExecute = false,
@@ -80,7 +79,10 @@ namespace TestHarness.Util
             _processToRun.Start();
             _processToRun.BeginOutputReadLine();
             _processToRun.BeginErrorReadLine();
-            _processToRun.PriorityClass = ProcessPriorityClass.AboveNormal;
+            if (Environment.OSVersion.Platform != PlatformID.Unix) {
+                // On Linux root permissions are required to change the PriorityClass
+                _processToRun.PriorityClass = ProcessPriorityClass.AboveNormal;
+            }
 
             var cleanExit = true;
             if (LimitExecutionTime)
