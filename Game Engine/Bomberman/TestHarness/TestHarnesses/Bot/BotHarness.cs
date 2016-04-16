@@ -77,7 +77,6 @@ namespace TestHarness.TestHarnesses.Bot
 
         public override void RoundComplete(GameMap gameMap, int round)
         {
-            WriteLogs();
             base.RoundComplete(gameMap, round);
 
             _currentRound = round;
@@ -150,6 +149,7 @@ namespace TestHarness.TestHarnesses.Bot
                 return;
             }
 
+            WriteLogs();
             PublishCommand(command);
         }
 
