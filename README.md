@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version 1.0.0.
+The current release is version 1.1.0.
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
@@ -28,7 +28,7 @@ Improvements and enhancements may be made to the game engine code over time, but
 The game engine has been made available to the community for peer review and bug fixes, so if you find any bugs or have any concerns, please e-mail challenge@entelect.co.za, discuss it with us on the [Challenge forum](http://forum.entelect.co.za/) or submit a pull request on Github.
 
 ## Usage
-The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/v1.0.0/Game.Engine.v1.0.0.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework 4.5.1 here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
+The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/v1.1.0/Game.Engine.v1.1.0.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework 4.5.1 here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
 
 Once you have installed .NET and downloaded the binary release zip file, extract it and open a new Command Prompt in the Binaries/{version}/Game Engine folder.
 
@@ -66,7 +66,7 @@ You might have to change the configurate file depending on your system in order 
 
 We have changed things a bit this year when it comes to compiling and running the bot.  You will not longer be able to include a run.bat and compile.bat file, the system will do that for you based on your bot meta you included.  One of the reasons we decided to go this route is in order to add additional features to the game engine for instance running calibration bots.
 
-Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/v1.0.0/Sample.Bots.zip)
+Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/v1.1.0/Sample.Bots.zip)
 
 The game engine requires that you have `bot.json` file.  This will tell the game engine how to compile and run your bot.  The file must contain the following:
 
@@ -198,6 +198,25 @@ Disclaimer:  This feature was developed purely for fun, and will most likely cra
 Change Log:
 1.Initial release
 
+
+### Version 1.1.0 - 16 April 2016
+Change Log:
+1. Added the current round to the `state.json` file.
+2. Changed from total processor time to wall clock time when measuring bot execution times as this has better multi thread/processor core support.
+3. Moved all of the game engine dll files to separate folder to clean up the root directory.
+4. Added missing DoNothingCommand for C# sample bot.
+5. Fix issues starting bot processes on Linux.
+6. Improved reliability of round logging for bot's.
+
+How will this affect me?
+1. You will not be able to get the current round for the game from the game engine.
+2. Multi threaded bots will now be allowed.
+3. If you made changes to the config file, you will have to updated the new config file with the changes you made.
+4. The moves enum can now be used to send a do nothing command to the game engine.
+5. Bots other than .Net should now run correctly on Linux.  (Linux no longer requires elevated privileges, and bots will not run with increased processor priority)
+6. That last bot on the game engine will now correctly write it's log files at the end of a round.
+
+
 # Dem Rules
 ### Map Generation
 
@@ -238,6 +257,7 @@ Players can either be console players or bots.  Both follow the same game engine
   5. Malfunctioning bots or bots that exceed their time limit will send back a do nothing command.
   6. Bot players that post more than 20 do nothing commands in a row will automatically place a bomb to kill themselves in an attempt to save the game
   7. Players must ensure that the bot process exits gracefully within the allotted time. No child processes will be allowed.
+  8. All bot logic processing must be done within the source code submitted for your bot.  You may not use network calls such as web services to aid in your bots decision making.
 
 ### Game Engine Rules
 
