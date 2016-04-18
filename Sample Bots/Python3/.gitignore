@@ -63,3 +63,8 @@ target/
 
 # pycharm
 .idea/
+
+# entelect specific
+move.txt
+state.json
+*.python-version
