@@ -15,6 +15,7 @@ namespace Domain.Meta
         public BotTypes BotType { get; set; }
         public string ProjectLocation { get; set; }
         public string RunFile { get; set; }
+        public String RunArgs { get; set; }
 
         public enum BotTypes
         {

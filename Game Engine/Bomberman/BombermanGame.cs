@@ -129,10 +129,10 @@ namespace Bomberman
             var map = renderer.RenderTextGameState();
             var roundInfo = GenerateRoundInfo(gameMap);
 
-            File.WriteAllText(engineLog, Logger.ReadAll(), Encoding.UTF8);
-            File.WriteAllText(mapLocation, map.ToString(), Encoding.UTF8);
-            File.WriteAllText(stateLocation, json.ToString(), Encoding.UTF8);
-            File.WriteAllText(roundInfoLocation, roundInfo, Encoding.UTF8);
+            File.WriteAllText(engineLog, Logger.ReadAll(), new UTF8Encoding(false));
+            File.WriteAllText(mapLocation, map.ToString(), new UTF8Encoding(false));
+            File.WriteAllText(stateLocation, json.ToString(), new UTF8Encoding(false));
+            File.WriteAllText(roundInfoLocation, roundInfo, new UTF8Encoding(false));
         }
 
         private string GenerateRoundInfo(GameMap gameMap)

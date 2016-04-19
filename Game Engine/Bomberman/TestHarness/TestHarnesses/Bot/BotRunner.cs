@@ -27,6 +27,13 @@ namespace TestHarness.TestHarnesses.Bot
             MaxRunTime = TimeSpan.FromSeconds(Settings.Default.MaxBotRuntimeSeconds);
         }
 
+        protected string AddAdditionalRunArgs(string currentArgs)
+        {
+            var runArgs = ParentHarness.BotMeta.RunArgs;
+
+            return String.IsNullOrEmpty(runArgs) ? currentArgs : String.Format("{0} {1}", currentArgs, runArgs);
+        }
+
         public void CalibrateBot()
         {
             var stopWatch = new Stopwatch();

@@ -18,6 +18,9 @@ namespace TestHarness.TestHarnesses.Bot.Runners
         {
             var processArgs = String.Format("{0} {1} \"{2}\"", ParentHarness.BotMeta.RunFile, ParentHarness.PlayerEntity.Key,
                 ParentHarness.CurrentWorkingDirectory);
+
+            processArgs = AddAdditionalRunArgs(processArgs);
+
             return new ProcessHandler(ParentHarness.BotDir, Settings.Default.PathToNode, processArgs, ParentHarness.Logger);
         }
 

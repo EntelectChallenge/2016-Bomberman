@@ -191,7 +191,7 @@ namespace TestHarness.TestHarnesses.Bot
 
             CreateFile(dir);
 
-            File.WriteAllText(dir, json.ToString(), Encoding.UTF8);
+            File.WriteAllText(dir, json.ToString(), new UTF8Encoding(false));
         }
 
         private void WriteMapFile(GameMap gameMap)
@@ -202,7 +202,7 @@ namespace TestHarness.TestHarnesses.Bot
 
             CreateFile(dir);
 
-            File.WriteAllText(dir, map.ToString(), Encoding.UTF8);
+            File.WriteAllText(dir, map.ToString(), new UTF8Encoding(false));
         }
 
         private void WriteLogs()
@@ -211,7 +211,7 @@ namespace TestHarness.TestHarnesses.Bot
 
             CreateFile(dir);
 
-            File.WriteAllText(dir, _inMemoryLogger.ReadAll(), Encoding.UTF8);
+            File.WriteAllText(dir, _inMemoryLogger.ReadAll(), new UTF8Encoding(false));
         }
 
         private void CreateFile(string dir)
