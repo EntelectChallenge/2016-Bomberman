@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version 1.1.0.
+The current release is version 1.1.1.
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
@@ -28,7 +28,7 @@ Improvements and enhancements may be made to the game engine code over time, but
 The game engine has been made available to the community for peer review and bug fixes, so if you find any bugs or have any concerns, please e-mail challenge@entelect.co.za, discuss it with us on the [Challenge forum](http://forum.entelect.co.za/) or submit a pull request on Github.
 
 ## Usage
-The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.1.0/Game.Engine.v1.1.0.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework 4.5.1 here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
+The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.1.1/Game.Engine.v1.1.1.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework 4.5.1 here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
 
 Once you have installed .NET and downloaded the binary release zip file, extract it and open a new Command Prompt in the Binaries/{version}/Game Engine folder.
 
@@ -77,7 +77,8 @@ The game engine requires that you have `bot.json` file.  This will tell the game
     "NickName" :"John",
     "BotType": "CSharp",
     "ProjectLocation" : "",
-    "RunFile" : "Reference\\bin\\Debug\\Reference.exe"
+    "RunFile" : "Reference\\bin\\Debug\\Reference.exe",
+    "RunArgs" : ""
 }
 ```
 
@@ -95,6 +96,7 @@ The game engine requires that you have `bot.json` file.  This will tell the game
 5. Project Location - The root location of the project file.  For instance in C# solutions, that will point to folder containing the solution (.sln) file.  This will be used for bot compilation when you submit your bot.
 6. Run File - This is the main entry point file for your bot that will be executed to play the game.
   * Java user have to ensure that the main class is specified in the manifest file
+7. RunArgs - (Optional) Any additional arguments you would like to send your bot.  This will be the 3rd argument sent to your bot (if provided).
 
 The game engine might set additional runtime parameter in some scenarios, for instance specifying minimum memory allocation for java bots.
 
@@ -216,6 +218,26 @@ How will this affect me?
 5. Bots other than .Net should now run correctly on Linux.  (Linux no longer requires elevated privileges, and bots will not run with increased processor priority)
 6. That last bot on the game engine will now correctly write it's log files at the end of a round.
 
+### Version 1.1.1 - 23 April 2016
+Change Log:
+1. Added Python 3 sample bot. Thank you tjorriemorrie.
+2. Fixed java sample bot not reading the state file
+3. Removed the BOM information written at the beginning of each file from the game engine.
+4. Added a new RunArgs property to the bot.json file that can be used to pass additional information to the bot when executed by the game engine
+5. Fixed the java calibration bot not including the time to read the state.json file.
+6. Fixed the python calibration bot not including the time to read the state.json file.
+7. Fixed the node.js calibration bot doing some additional work not done by the other calibration bots.
+8. Removed the calibation bot directory. We are using some of the sample bots as calibration bots.
+
+How will this affect me?
+1. You now have a nice starting point for making a python 3 bot.
+2. New entrants can now just carry on with the parsing of the file contents.
+3. If you added special logic to remove the BOM information at the beginning of files, you should remove that logic.
+4. Will not affect you, unless you want to send your bot additional arguments.
+5. Java bots now get a couple of milliseconds extra to run.
+6. Python bots now get a couple of milliseconds extra to run.
+7. Node.JS bots now get a couple of milliseconds less to run.
+8. Will not affect you, this is just to clean up the repo a little.
 
 # Dem Rules
 ### Map Generation
