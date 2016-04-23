@@ -44,10 +44,6 @@ function main(botKey, outputPath) {
     util.log('Started.');
 
     var state = stateLoader.load(outputPath);
-    logPlayerState(state, botKey);
-
-    var map = mapLoader.load(outputPath);
-    logMap(map);
 
     var move = getRandomMove();
     util.outputMove(move, outputPath, function() {
@@ -130,9 +126,6 @@ var stateLoader = {
         }
 
         var fileContents = fs.readFileSync(filename, {encoding: 'utf8'});
-        var gameState = JSON.parse(fileContents.trim());
-
-        // TODO: Enhance the game state with some functions for manipulating it...
 
         return gameState;
     }

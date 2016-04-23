@@ -17,6 +17,7 @@ def main(output_path, player_key):
     move_file.close()
 
     state_file = open(path.join(output_path, 'state.json'), 'r')
+	content = state_file.readlines()
     state_file.close()
 
 if __name__ == '__main__':
