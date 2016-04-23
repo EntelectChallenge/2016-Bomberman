@@ -198,11 +198,13 @@ Disclaimer:  This feature was developed purely for fun, and will most likely cra
 
 ### Version 1.0.0 - 11 April 2016
 Change Log:
+
 1.Initial release
 
 
 ### Version 1.1.0 - 16 April 2016
 Change Log:
+
 1. Added the current round to the `state.json` file.
 2. Changed from total processor time to wall clock time when measuring bot execution times as this has better multi thread/processor core support.
 3. Moved all of the game engine dll files to separate folder to clean up the root directory.
@@ -211,6 +213,7 @@ Change Log:
 6. Improved reliability of round logging for bot's.
 
 How will this affect me?
+
 1. You will not be able to get the current round for the game from the game engine.
 2. Multi threaded bots will now be allowed.
 3. If you made changes to the config file, you will have to updated the new config file with the changes you made.
@@ -220,6 +223,7 @@ How will this affect me?
 
 ### Version 1.1.1 - 23 April 2016
 Change Log:
+
 1. Added Python 3 sample bot. Thank you tjorriemorrie.
 2. Fixed java sample bot not reading the state file
 3. Removed the BOM information written at the beginning of each file from the game engine.
@@ -230,6 +234,7 @@ Change Log:
 8. Removed the calibation bot directory. We are using some of the sample bots as calibration bots.
 
 How will this affect me?
+
 1. You now have a nice starting point for making a python 3 bot.
 2. New entrants can now just carry on with the parsing of the file contents.
 3. If you added special logic to remove the BOM information at the beginning of files, you should remove that logic.
