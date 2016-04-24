@@ -41,25 +41,7 @@ namespace GameEngine.Engine
         /// <exception cref="MapUnsuitableException">Will throw an exception if the seed produces an unsuitable map</exception>
         public void PrepareGame(List<Player> players, int seed)
         {
-            var seedGenerator = new Random(seed);
-            var randomSeed = seedGenerator.Next();
-            var generationOk = false;
-            while (!generationOk)
-            {
-                Logger.LogInfo("Trying seed " + randomSeed + "...");
-
-                try
-                {
-                    var mapGenerator = new GameMapGenerator<Player>(players);
-                    _gameMap = mapGenerator.GenerateGameMap(randomSeed);
-                    generationOk = true;
-                }
-                catch (MapUnsuitableException ex)
-                {
-                    Logger.LogException("Map not suitable with seed, trying a new one.", ex);
-                    randomSeed = seedGenerator.Next();
-                }
-            }
+            _gameMap = (new GameMapGenerator(players)).GenerateGameMap(seed);
 
             _players = players;
             _currentRound = 0;
