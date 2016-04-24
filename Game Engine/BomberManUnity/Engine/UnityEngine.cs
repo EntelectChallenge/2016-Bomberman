@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using BomberManUnity.Loggers;
 using BomberManUnity.Players;
 using Domain.Common;
 using GameEngine.Commands.PlayerCommands;
-using GameEngine.Engine;
+using GameEngine.Common;
 using GameEngine.MapGenerator;
 
 namespace BomberManUnity.Engine
@@ -14,13 +14,13 @@ namespace BomberManUnity.Engine
     {
         private GameMap _gameMap;
         private UnityRoundProcessor _roundProcessor;
-        private List<UnityPlayer> _players;
+        private List<Player> _players;
 
         public void PrepareNewGame(List<UnityPlayer> players, int seed)
         {
-            var mapGenerator = new GameMapGenerator<UnityPlayer>(players);
+            _players = players.Cast<Player>().ToList();
+            var mapGenerator = new GameMapGenerator(_players);
             _gameMap = mapGenerator.GenerateGameMap(seed);
-            _players = players;
         }
 
         public void StartNewGame()

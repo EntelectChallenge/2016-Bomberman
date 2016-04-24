@@ -13,15 +13,15 @@ using GameEngine.MapGenerator.PowerUpGenerators;
 
 namespace GameEngine.MapGenerator
 {
-    public class GameMapGenerator<T> where T : Player
+    public class GameMapGenerator
     {
-        private readonly List<T> _players;
+        private readonly List<Player> _players;
         private readonly EntityFactory _entityFactory;
         private Random _rng;
         private IPowerUpGenerator _powerUpGenerator;
         public MapSizes MapSize { get; set; }
 
-        public GameMapGenerator(List<T> players)
+        public GameMapGenerator(List<Player> players)
         {
             if (players.Count <= 1 || players.Count > 12)
                 throw new ArgumentException("Number of players should be between 2 and 12!");
@@ -47,7 +47,7 @@ namespace GameEngine.MapGenerator
                 MapSize = MapSizes.Large;
         }
 
-        public GameMapGenerator(List<T> players, bool useRandomPowerupGenerator)
+        public GameMapGenerator(List<Player> players, bool useRandomPowerupGenerator)
             :this(players)
         {
             if (useRandomPowerupGenerator)
@@ -60,19 +60,26 @@ namespace GameEngine.MapGenerator
             }
         }
 
-        public GameMap GenerateGameMap(int seed)
+        public GameMap GenerateGameMap(int seedSeed)
         {
-            _rng = new Random(seed);
+            var seedGenerator = new Random(seedSeed);
+            for (int randomSeed = seedGenerator.Next(); ; randomSeed = seedGenerator.Next())
+            {
+                try
+                {
+                    _rng = new Random(randomSeed);
+                    _powerUpGenerator.Rand = _rng;
+                    var mapSize = GetMapSize();
+                    var gameMap = new GameMap(mapSize, mapSize, seedSeed);
+                    GenerateIndestructableWalls(gameMap);
+                    GeneratePlayers(gameMap);
+                    GenerateDestructableWalls(gameMap);
+                    GeneratePowerUps(gameMap);
 
-            _powerUpGenerator.Rand = _rng;
-            var mapSize = GetMapSize();
-            var gameMap = new GameMap(mapSize, mapSize, seed);
-            GenerateIndesctructableWalls(gameMap);
-            GeneratePlayers(gameMap);
-            GenerateDestructableWalls(gameMap, seed);
-            GeneratePowerUps(gameMap, seed);
-
-            return gameMap;
+                    return gameMap;
+                }
+                catch (MapUnsuitableException) { }
+            }
         }
 
         private int GetMapSize()
@@ -88,7 +95,7 @@ namespace GameEngine.MapGenerator
             }
         }
 
-        private void GenerateIndesctructableWalls(GameMap gameMap)
+        private void GenerateIndestructableWalls(GameMap gameMap)
         {
             //Generate Map Edges and created an indesctructable wall at every odd location
             using (var enumerator = gameMap.GetEnumerator())
@@ -201,7 +208,7 @@ namespace GameEngine.MapGenerator
             return 4;
         }
 
-        private void GenerateDestructableWalls(GameMap gameMap, int seed)
+        private void GenerateDestructableWalls(GameMap gameMap)
         {
             //Increase the quadrant size slightly so we can user the centre of the map is populated correctly
             var width = (gameMap.MapWidth)/2 + 2;
@@ -288,7 +295,7 @@ namespace GameEngine.MapGenerator
             }
         }
 
-        private void GeneratePowerUps(GameMap gameMap, int seed)
+        private void GeneratePowerUps(GameMap gameMap)
         {
             if (!_powerUpGenerator.IsMapSuitable(gameMap)) {
                 throw new MapUnsuitableException();
