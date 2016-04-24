@@ -24,9 +24,7 @@ namespace TestHarness.TestHarnesses.Bot.Runners
                 pythonExecutable = Settings.Default.PathToPython2;
             }
 
-            var processArgs = String.Format("{0} {1} \"{2}\"", ParentHarness.BotMeta.RunFile,
-                ParentHarness.PlayerEntity.Key, ParentHarness.CurrentWorkingDirectory);
-
+            var processArgs = GetProcessArguments(ParentHarness.BotMeta.RunFile, ParentHarness.PlayerEntity.Key, ParentHarness.CurrentWorkingDirectory);
             processArgs = AddAdditionalRunArgs(processArgs);
 
             return new ProcessHandler(ParentHarness.BotDir, pythonExecutable, processArgs, ParentHarness.Logger);
@@ -42,13 +40,18 @@ namespace TestHarness.TestHarnesses.Bot.Runners
 
             var calibrationBot = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 @"Calibrations" + Path.DirectorySeparatorChar + "BotCalibrationPython.py");
-            var processArgs = String.Format("{0} {1} \"{2}\"", calibrationBot,
-                ParentHarness.PlayerEntity.Key, ParentHarness.CurrentWorkingDirectory);
+            var processArgs = GetProcessArguments(calibrationBot, ParentHarness.PlayerEntity.Key, ParentHarness.CurrentWorkingDirectory);
 
             using (var handler = new ProcessHandler(AppDomain.CurrentDomain.BaseDirectory, pythonExecutable, processArgs, ParentHarness.Logger))
             {
                 handler.RunProcess();
             }
+        }
+
+
+        private static string GetProcessArguments(string scriptFilePath, char playerKey, string workingDirectory)
+        {
+            return String.Format("\"{0}\" {1} \"{2}\"", scriptFilePath, playerKey, workingDirectory);
         }
     }
 }

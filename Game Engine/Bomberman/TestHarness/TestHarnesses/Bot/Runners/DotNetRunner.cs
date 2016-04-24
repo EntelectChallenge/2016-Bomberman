@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Domain.Meta;
 using TestHarness.Util;
 
@@ -18,13 +16,12 @@ namespace TestHarness.TestHarnesses.Bot.Runners
         {
             var botDir = ParentHarness.BotDir;
             var botFile = ParentHarness.BotMeta.RunFile;
-            var processName = Path.Combine(botDir, botFile);
             var processArgs = String.Format("{0} \"{1}\"", ParentHarness.PlayerEntity.Key,
                 ParentHarness.CurrentWorkingDirectory);
             
             processArgs = AddAdditionalRunArgs(processArgs);
 
-			return new ProcessHandler(botDir, ConvertProcessName(processName), ConvertProcessArgs(processName, processArgs), ParentHarness.Logger, true);
+			return new ProcessHandler(botDir, ConvertProcessName(botFile), ConvertProcessArgs(botFile, processArgs), ParentHarness.Logger, true);
         }
 
         protected override void RunCalibrationTest()
@@ -47,7 +44,7 @@ namespace TestHarness.TestHarnesses.Bot.Runners
 
         private string ConvertProcessArgs(string processName, string args)
         {
-            return Environment.OSVersion.Platform == PlatformID.Unix ? processName + " " + args : args;
+            return Environment.OSVersion.Platform == PlatformID.Unix ? String.Format("\"{0}\" {1}", processName, args) : args;
         }
 
         private string GetCalibrarionExe()
