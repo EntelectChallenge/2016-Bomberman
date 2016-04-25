@@ -18,8 +18,7 @@ In this project you will find everything you need to build and run a bot on your
 1. Game Engine - The game engine is responsible for running matches between players.
 2. Sample Bots - Sample bots can be used a starting point for your bot.
 3. Reference Bot - The reference bot contains some AI logic that will play the game based on predefined rules.  You can use this to play against your bot for testing purposes.
-4. Calibration Bots - Calibration bots are used to calibrate the game engine when running bots to determine the amount of time a player bot is allowed to make a decision before the game engine kills it.
-5. Binaries - Binaries for the current version of the game.  The binaries can be used to run the game without having to compile it your self.
+4. Sample State Files - Can be used as a starting point to get the parsing working for your bot.
 
 This project can be used to get a better understanding of the rules and to help debug your bot.
 
