@@ -22,8 +22,7 @@
 
     <build>
         <sourceDirectory>src/main/scala</sourceDirectory>
-        <testSourceDirectory>src/test/scala</testSourceDirectory>
-	
+        <testSourceDirectory>src/test/scala</testSourceDirectory>	
         <plugins>
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
@@ -37,6 +36,9 @@
                         </goals>        
                     </execution>
                 </executions>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                </configuration>
 	    </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
