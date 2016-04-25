@@ -1,0 +1,8 @@
+{
+    "Author":"John Doe",
+    "Email":"john.doe@example.com",
+    "NickName" :"John",
+    "BotType": "Java",
+    "ProjectLocation" : "",
+    "RunFile" : "target\\SampleBotScala-1.0-jar-with-dependencies.jar"
+}
