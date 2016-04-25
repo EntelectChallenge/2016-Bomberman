@@ -65,19 +65,19 @@ namespace BomberManUnity.Engine
             while (player.PlayerEntity.Location.X != x || player.PlayerEntity.Location.Y != y)
             {
                 whileCount++;
-                if (player.PlayerEntity.Location.X > x)
+                if (player.PlayerEntity.Location.X > x && IsWalkableBlock(player.PlayerEntity.Location.X - 1, player.PlayerEntity.Location.Y))
                 {
                     AddPlayerCommand(player, new MovementCommand(MovementCommand.Direction.Left));
                 }
-                if (player.PlayerEntity.Location.X < x)
+                if (player.PlayerEntity.Location.X < x && IsWalkableBlock(player.PlayerEntity.Location.X + 1, player.PlayerEntity.Location.Y))
                 {
                     AddPlayerCommand(player, new MovementCommand(MovementCommand.Direction.Right));
                 }
-                if (player.PlayerEntity.Location.Y > y)
+                if (player.PlayerEntity.Location.Y > y && IsWalkableBlock(player.PlayerEntity.Location.X, player.PlayerEntity.Location.Y - 1))
                 {
                     AddPlayerCommand(player, new MovementCommand(MovementCommand.Direction.Up));
                 }
-                if (player.PlayerEntity.Location.Y < y)
+                if (player.PlayerEntity.Location.Y < y && IsWalkableBlock(player.PlayerEntity.Location.X, player.PlayerEntity.Location.Y + 1))
                 {
                     AddPlayerCommand(player, new MovementCommand(MovementCommand.Direction.Down));
                 }
@@ -89,6 +89,12 @@ namespace BomberManUnity.Engine
                     throw new Exception(String.Format("Player did not move to location in a timely manner, requested to move to location {0}:{1} but is still at {2}:{3} ", x, y, player.PlayerEntity.Location.X, player.PlayerEntity.Location.Y));
                 }
             }
+        }
+
+        private bool IsWalkableBlock(int x, int y)
+        {
+            var block = GameMap.GetBlockAtLocation(x, y);
+            return block.Entity == null && block.Bomb == null;
         }
     }
 }
