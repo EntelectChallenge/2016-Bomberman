@@ -193,56 +193,6 @@ Disclaimer:  This feature was developed purely for fun, and will most likely cra
 3. Make sure the clients enter your computer name as it is registered on the network (IP Address might also work, but not always)
 4. Client players will connect to the host on ports 20001 - 20013
 
-## Release Notes
-
-### Version 1.0.0 - 11 April 2016
-Change Log:
-
-1.Initial release
-
-
-### Version 1.1.0 - 16 April 2016
-Change Log:
-
-1. Added the current round to the `state.json` file.
-2. Changed from total processor time to wall clock time when measuring bot execution times as this has better multi thread/processor core support.
-3. Moved all of the game engine dll files to separate folder to clean up the root directory.
-4. Added missing DoNothingCommand for C# sample bot.
-5. Fix issues starting bot processes on Linux.
-6. Improved reliability of round logging for bot's.
-
-How will this affect me?
-
-1. You will not be able to get the current round for the game from the game engine.
-2. Multi threaded bots will now be allowed.
-3. If you made changes to the config file, you will have to updated the new config file with the changes you made.
-4. The moves enum can now be used to send a do nothing command to the game engine.
-5. Bots other than .Net should now run correctly on Linux.  (Linux no longer requires elevated privileges, and bots will not run with increased processor priority)
-6. That last bot on the game engine will now correctly write it's log files at the end of a round.
-
-### Version 1.1.1 - 23 April 2016
-Change Log:
-
-1. Added Python 3 sample bot. Thank you tjorriemorrie.
-2. Fixed java sample bot not reading the state file
-3. Removed the BOM information written at the beginning of each file from the game engine.
-4. Added a new RunArgs property to the bot.json file that can be used to pass additional information to the bot when executed by the game engine
-5. Fixed the java calibration bot not including the time to read the state.json file.
-6. Fixed the python calibration bot not including the time to read the state.json file.
-7. Fixed the node.js calibration bot doing some additional work not done by the other calibration bots.
-8. Removed the calibation bot directory. We are using some of the sample bots as calibration bots.
-
-How will this affect me?
-
-1. You now have a nice starting point for making a python 3 bot.
-2. New entrants can now just carry on with the parsing of the file contents.
-3. If you added special logic to remove the BOM information at the beginning of files, you should remove that logic.
-4. Will not affect you, unless you want to send your bot additional arguments.
-5. Java bots now get a couple of milliseconds extra to run.
-6. Python bots now get a couple of milliseconds extra to run.
-7. Node.JS bots now get a couple of milliseconds less to run.
-8. Will not affect you, this is just to clean up the repo a little.
-
 # Dem Rules
 ### Map Generation
 
@@ -358,3 +308,52 @@ Players will collect points during game play.  Points will be used (along with o
 4. Players obtaining the Super Power up will receive additional points.
 5. When multiple player bombs are triggered in a bomb chain, all players with bombs forming part of the chain will receive the points for all entities destroyed in the chain.
 6. The round in which a player is killed will cause the player to forfeit all points earned in that round, and the player will lose points equal to the points earned when killing another player.
+
+## Release Notes
+
+### Version 1.1.1 - 23 April 2016
+Change Log:
+
+1. Added Python 3 sample bot. Thank you tjorriemorrie.
+2. Fixed java sample bot not reading the state file
+3. Removed the BOM information written at the beginning of each file from the game engine.
+4. Added a new RunArgs property to the bot.json file that can be used to pass additional information to the bot when executed by the game engine
+5. Fixed the java calibration bot not including the time to read the state.json file.
+6. Fixed the python calibration bot not including the time to read the state.json file.
+7. Fixed the node.js calibration bot doing some additional work not done by the other calibration bots.
+8. Removed the calibation bot directory. We are using some of the sample bots as calibration bots.
+
+How will this affect me?
+
+1. You now have a nice starting point for making a python 3 bot.
+2. New entrants can now just carry on with the parsing of the file contents.
+3. If you added special logic to remove the BOM information at the beginning of files, you should remove that logic.
+4. Will not affect you, unless you want to send your bot additional arguments.
+5. Java bots now get a couple of milliseconds extra to run.
+6. Python bots now get a couple of milliseconds extra to run.
+7. Node.JS bots now get a couple of milliseconds less to run.
+8. Will not affect you, this is just to clean up the repo a little.
+
+### Version 1.1.0 - 16 April 2016
+Change Log:
+
+1. Added the current round to the `state.json` file.
+2. Changed from total processor time to wall clock time when measuring bot execution times as this has better multi thread/processor core support.
+3. Moved all of the game engine dll files to separate folder to clean up the root directory.
+4. Added missing DoNothingCommand for C# sample bot.
+5. Fix issues starting bot processes on Linux.
+6. Improved reliability of round logging for bot's.
+
+How will this affect me?
+
+1. You will not be able to get the current round for the game from the game engine.
+2. Multi threaded bots will now be allowed.
+3. If you made changes to the config file, you will have to updated the new config file with the changes you made.
+4. The moves enum can now be used to send a do nothing command to the game engine.
+5. Bots other than .Net should now run correctly on Linux.  (Linux no longer requires elevated privileges, and bots will not run with increased processor priority)
+6. That last bot on the game engine will now correctly write it's log files at the end of a round.
+
+### Version 1.0.0 - 11 April 2016
+Change Log:
+
+1. Initial release
