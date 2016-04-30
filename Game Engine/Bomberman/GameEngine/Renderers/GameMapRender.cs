@@ -87,8 +87,10 @@ namespace GameEngine.Renderers
                         sb.Append(String.Format("{{x:{0},y:{1},fuse:{2},radius:{3}}}", bomb.Location.X, bomb.Location.Y,
                             bomb.BombTimer, bomb.BombRadius));
 
-                        if (--bombCount > 0)
-                            sb.AppendLine(",");
+                        if (--bombCount <= 0) continue;
+                        
+                        if (minify) sb.Append(",");
+                        else sb.AppendLine(",");
                     }
 
                     sb.AppendLine()
