@@ -14,14 +14,11 @@ namespace GameEngine.Commands.PlayerCommands
         public void PerformCommand(GameMap gameMap, PlayerEntity player, CommandTransaction commandTransaction)
         {
             if(gameMap.GetPlayerBombCount(player) == 0)
-                throw new InvalidCommandException("Player has not bombs to trigger");
+                throw new InvalidCommandException("Player has no bombs to trigger");
 
             var bombs = gameMap.GetPlayerBombs(player);
 
-            if(bombs.Any(x => x.IsExploding))
-                throw new InvalidCommandException("There is already a bomb currently exlpoding, cannot trigger another one");
-
-            var bomb = bombs.OrderBy(x => x.BombTimer).FirstOrDefault();
+            var bomb = bombs.Where(x => !x.IsExploding && x.BombTimer >= 1).OrderBy(x => x.BombTimer).FirstOrDefault();
             if (bomb != null)
             {
                 bomb.BombTimer = 1;
