@@ -186,7 +186,7 @@ namespace TestHarness.TestHarnesses.Bot
         private void WriteStateFile(GameMap gameMap)
         {
             var dir = Path.Combine(CurrentWorkingDirectory, Settings.Default.StateFileName);
-            var renderer = new GameMapRender(gameMap);
+            var renderer = new GameMapRender(gameMap, true);
             var json = renderer.RenderJsonGameState();
 
             CreateFile(dir);
@@ -197,7 +197,7 @@ namespace TestHarness.TestHarnesses.Bot
         private void WriteMapFile(GameMap gameMap)
         {
             var dir = Path.Combine(CurrentWorkingDirectory, Settings.Default.MapFileName);
-            var renderer = new GameMapRender(gameMap);
+            var renderer = new GameMapRender(gameMap, true);
             var map = renderer.RenderTextGameState();
 
             CreateFile(dir);
