@@ -65,7 +65,7 @@ You might have to change the configurate file depending on your system in order 
 
 We have changed things a bit this year when it comes to compiling and running the bot.  You will not longer be able to include a run.bat and compile.bat file, the system will do that for you based on your bot meta you included.  One of the reasons we decided to go this route is in order to add additional features to the game engine for instance running calibration bots.
 
-Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.0/Sample.Bots.zip)
+Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.1/Sample.Bots.zip)
 
 The game engine requires that you have `bot.json` file.  This will tell the game engine how to compile and run your bot.  The file must contain the following:
 
