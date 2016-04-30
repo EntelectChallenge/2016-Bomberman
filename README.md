@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version 1.1.1.
+The current release is version 1.2.1.
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
@@ -299,9 +299,9 @@ Power ups can be collected by players to improve their players abilities
 Players will collect points during game play.  Points will be used (along with other conditions) to determine the player leaderboard and ultimately the winner
 
 1. Players will receive 10 points for destroying destructible walls.
-  1. If two bombs hit the same wall, both players will receive 10 points for destroying the wall.  Unless the wall was destroyed as result of a chain explosion.
+  1. If two bombs hit the same wall, both players will receive 10 points for destroying the wall.
 2. Players will receive points for killing another player based on the following equation ((100 + Max point per map for destructible walls) / players on map).  So on map with 10 destructible walls with 4 players the points for killing a player will be 50.
-  1. If two bombs hit another player, both players will receive points for killing the player.  Unless the player was killed as result of chain explosion.
+  1. If two bombs hit another player, both players will receive points for killing the player.
 3. Players will receive points based on map coverage:
   1. Points will only be calculated for each new block touched by a player.
   2. Points will determine player coverage on the map, with a map coverage of 100% giving the player 100 points.
@@ -310,6 +310,25 @@ Players will collect points during game play.  Points will be used (along with o
 6. The round in which a player is killed will cause the player to forfeit all points earned in that round, and the player will lose points equal to the points earned when killing another player.
 
 ## Release Notes
+
+### Version 1.2.1 - 30 April 2016
+Change Log:
+
+1. Added missing requirements.txt file for python bots.
+2. Support spaces in bot path executable.
+3. Use the game seed as console display and replay folder name instead of the seed used to generate the map.
+4. Added Scala sample bot (Thank you markvrensburg).
+5. Changed trigger bomb command behaviour to allow bots to trigger bombs even if they have bombs currently exploding on the map.
+6. Updated the map.txt to print player bombs on the same line, each bomb separated by a comma.
+
+How will this affect me?
+
+1. If you are developing a python bot, please include the requirement txt file.
+2. Bots will now be allowed to have spaces in their directory/file name.
+3. If passing in a seed to the game engine, it will now correctly display that seed and use it as the replay folder name.
+4. Entries developed using Scala will now be allowed.
+5. The game engine will no longer throw an exception and discard your command if you trigger a bomb while one of your other bombs are exploding.  The new behaviour will only take non exploding bombs into consideration for the trigger command.
+6. If you have a parser for the map.txt it will have to be updated to no longer take the new lines in to consideration when parsing bombs planted by players.
 
 ### Version 1.1.1 - 23 April 2016
 Change Log:
