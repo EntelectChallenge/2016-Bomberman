@@ -27,7 +27,7 @@ Improvements and enhancements may be made to the game engine code over time, but
 The game engine has been made available to the community for peer review and bug fixes, so if you find any bugs or have any concerns, please e-mail challenge@entelect.co.za, discuss it with us on the [Challenge forum](http://forum.entelect.co.za/) or submit a pull request on Github.
 
 ## Usage
-The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.1/Game.Engine.v1.2.1.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework 4.5.1 here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
+The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.2/Game.Engine.v1.2.2.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
 
 Once you have installed .NET and downloaded the binary release zip file, extract it and open a new Command Prompt in the Binaries/{version}/Game Engine folder.
 
@@ -52,7 +52,11 @@ Once you have written your own bot you can you can use the command line argument
                      log files to be output (instead of the default           
                      Replays/{matchSeed}).                   
 
-  -s --seed        	(Default: Random) The game seed to use for map generation.                                 
+  -s --seed        	(Default: Random) The game seed to use for map generation.    
+
+  --nolimit        	(Default: false) Disables the time limit for bot execution.
+
+  --debug        	(Default: false) Halts the game engine when a bot writes to the error stream.                                 
 
   --help             Display this help screen.                                
 ```
@@ -65,7 +69,7 @@ You might have to change the configurate file depending on your system in order 
 
 We have changed things a bit this year when it comes to compiling and running the bot.  You will not longer be able to include a run.bat and compile.bat file, the system will do that for you based on your bot meta you included.  One of the reasons we decided to go this route is in order to add additional features to the game engine for instance running calibration bots.
 
-Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.1/Sample.Bots.zip)
+Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.2/Sample.Bots.zip)
 
 The game engine requires that you have `bot.json` file.  This will tell the game engine how to compile and run your bot.  The file must contain the following:
 
@@ -310,6 +314,23 @@ Players will collect points during game play.  Points will be used (along with o
 6. The round in which a player is killed will cause the player to forfeit all points earned in that round, and the player will lose points equal to the points earned when killing another player.
 
 ## Release Notes
+
+### Version 1.2.2 - 07 May 2016
+Change Log:
+
+1. State files in the root of the round folder will be the state at the beginning of the round instead of the end.
+2. Include player kills points (PlayerBounty) in the state files.
+3. The Engine now correctly terminates after the game as ended
+4. Added a new command to disable the time limit for bots (--nolimit)
+5. Added a new command to halt the game engine when a bot encounters an error (--debug)
+
+How will this affect me?
+
+1. This will not affect your bot but it will help with debugging and the Gooey Challenge can use this to correctly render the rounds.
+2. If you wrote a custom parses for the `map.txt` file you will have make changes to support this.
+3. No affect on your bot.
+4. No affect on your bot, but you can now try some more time consuming things without the game engine killing your bot.
+5. If your bot writes to the error output stream the game engine can now halt to inform you that your bot encountered an error.
 
 ### Version 1.2.1 - 30 April 2016
 Change Log:
