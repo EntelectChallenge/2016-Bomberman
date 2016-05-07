@@ -22,17 +22,21 @@ namespace TestHarness.TestHarnesses.Bot
         public readonly BotMeta BotMeta;
         public readonly string BotDir;
         public readonly string WorkDir;
+        public readonly bool EnforceTimeLimit;
+        public readonly bool HaltOnError;
         private readonly InMemoryLogger _inMemoryLogger;
         private readonly BotRunner _botRunner;
         private int _currentRound = 0;
         private int _totalDoNothingCommands;
 
-        public BotHarness(BotMeta meta, string botDir, string workDir)
+        public BotHarness(BotMeta meta, string botDir, string workDir, bool noTimeLimit, bool haltOnError)
             : base(meta.NickName ?? meta.Author ?? meta.Email)
         {
             BotMeta = meta;
             BotDir = botDir;
             WorkDir = workDir;
+            EnforceTimeLimit = !noTimeLimit;
+            HaltOnError = haltOnError;
 
             _inMemoryLogger = new InMemoryLogger();
             Logger = _inMemoryLogger;

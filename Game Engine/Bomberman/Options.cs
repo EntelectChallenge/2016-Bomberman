@@ -38,6 +38,14 @@ namespace Bomberman
             HelpText = "The seed to use for map generation")]
         public int? GameSeed { get; set; }
 
+        [Option("nolimit", DefaultValue = false,
+            HelpText = "Removes the time limit for bot execution")]
+        public bool NoLimit { get; set; }
+
+        [Option("debug", DefaultValue = false,
+            HelpText = "Halts the Game Engine when a bot writes to the error stream")]
+        public bool DebugMode { get; set; }
+
         [HelpOption]
         public string GetUsage()
         {

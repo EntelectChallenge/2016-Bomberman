@@ -44,7 +44,7 @@ namespace GameEngine.Renderers
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine(String.Format("Map Width: {0}, Map Height: {1}, Current Round: {2}, Seed: {3}", GameMap.MapWidth, GameMap.MapHeight, GameMap.CurrentRound, GameMap.MapSeed));
+            sb.AppendLine(String.Format("Map Width: {0}, Map Height: {1}, Current Round: {2}, Seed: {3}, PlayerBounty: {4}", GameMap.MapWidth, GameMap.MapHeight, GameMap.CurrentRound, GameMap.MapSeed, GameMap.PlayerBounty));
 
             using (var enumerator = GameMap.GetEnumerator())
             {

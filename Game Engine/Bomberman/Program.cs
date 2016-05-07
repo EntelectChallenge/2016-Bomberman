@@ -56,12 +56,6 @@ namespace Bomberman
             {
                 Console.WriteLine(ex);
             }
-
-
-            while (Console.Read() != 'q')
-            {
-                //do nothing
-            }
         }
 
 

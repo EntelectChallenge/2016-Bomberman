@@ -14,6 +14,7 @@ namespace TestHarness.TestHarnesses.Bot
     {
         protected readonly BotHarness ParentHarness;
         protected TimeSpan MaxRunTime;
+        private bool _errorLogged = false;
 
         protected BotRunner(BotHarness parentHarness)
         {
@@ -48,9 +49,18 @@ namespace TestHarness.TestHarnesses.Bot
                 var sw = new Stopwatch();
                 try
                 {
-                    handler.LimitExecutionTime = true;
+                    handler.LimitExecutionTime = ParentHarness.EnforceTimeLimit;
                     handler.ProcessToRun.OutputDataReceived += (sender, args) => ParentHarness.Logger.LogInfo("Output from bot: " + args.Data);
                     handler.ProcessToRun.ErrorDataReceived += (sender, args) => ParentHarness.Logger.LogException("Output from bot: " + args.Data);
+
+                    if (ParentHarness.HaltOnError)
+                    {
+                        handler.ProcessToRun.ErrorDataReceived += (sender, args) =>
+                        {
+                            _errorLogged = true;
+                        };
+                    }
+
                     ParentHarness.Logger.LogDebug(String.Format("Executing bot with following commands {0} {1}", handler.ProcessToRun.StartInfo.FileName, handler.ProcessToRun.StartInfo.Arguments));
 
                     sw.Start();
@@ -58,13 +68,19 @@ namespace TestHarness.TestHarnesses.Bot
                     sw.Stop();
 
                     ParentHarness.Logger.LogInfo("Your bots total execution time was " + sw.Elapsed);
+
+                    if (ParentHarness.HaltOnError)
+                    {
+                        Console.WriteLine("Bot encountered an error, press any key to continue");
+                        Console.ReadKey();
+                    }
                 }
                 catch (Exception ex)
                 {
                     ParentHarness.Logger.LogException("Failure while executing bot " + handler.ProcessToRun.StartInfo.FileName + " " + handler.ProcessToRun.StartInfo.Arguments, ex);
                 }
 
-                if (sw.Elapsed >= MaxRunTime)
+                if (ParentHarness.EnforceTimeLimit && sw.Elapsed >= MaxRunTime)
                 {
                     ParentHarness.Logger.LogInfo("Your bot exceeded the maximum execution time");
                     throw new TimeLimitExceededException("Time limit exceeded by " + (sw.Elapsed - MaxRunTime));

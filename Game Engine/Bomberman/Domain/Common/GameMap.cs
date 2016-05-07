@@ -31,6 +31,8 @@ namespace Domain.Common
         public IList<PlayerEntity> RegisteredPlayerEntities { get; private set; }
         [JsonProperty]
         public int CurrentRound { get; set; }
+        [JsonProperty]
+        public int PlayerBounty { get; set; }
 
         public GameMap(int width, int height, int mapSeed)
         {

@@ -68,6 +68,7 @@ namespace GameEngine.Engine
 
             //Players should only get slightly more points vs points obtained from destroying walls
             _playerKillPoints /= players.Count;
+            _gameMap.PlayerBounty = _playerKillPoints;
         }
 
         /// <summary>

@@ -32,7 +32,8 @@ namespace Bomberman
             {
                 _engine = new BombermanEngine { Logger = Logger };
                 _engine.GameComplete += EngineOnGameComplete;
-                _engine.RoundComplete += (map, round) => LogEngineInfo(map, round - 1);
+                _engine.RoundComplete += WriteStateFiles;
+                _engine.RoundComplete += (gameState, round) => WriteEgineInfo(gameState, round - 1);
 
                 if (options.Pretty)
                 {
@@ -47,7 +48,7 @@ namespace Bomberman
                     players.Add(new ConsoleHarness("Player " + (players.Count + 1)));
                 }
 
-                players.AddRange(options.BotFolders.Select(botFolder => LoadBot(botFolder, _runLocation)).Where(player => player != null));
+                players.AddRange(options.BotFolders.Select(botFolder => LoadBot(botFolder, _runLocation, options.NoLimit, options.DebugMode)).Where(player => player != null));
 
                 if (players.Count == 0)
                 {
@@ -64,7 +65,7 @@ namespace Bomberman
 
                 _engine.PrepareGame(players, gameSeed);
 
-                LogEngineInfo(_engine.GetGameState(), 0);
+                WriteStateFiles(_engine.GetGameState(), 0);
                 _engine.StartNewGame();
             }
             catch (Exception ex)
@@ -100,23 +101,19 @@ namespace Bomberman
             }
         }
 
-        private void LogEngineInfo(GameMap gameMap, int round)
+        private void WriteStateFiles(GameMap gameMap, int round)
         {
-            var engineLog = Path.Combine(_runLocation, round.ToString());
             var mapLocation = Path.Combine(_runLocation, round.ToString());
             var stateLocation = Path.Combine(_runLocation, round.ToString());
             var roundInfoLocation = Path.Combine(_runLocation, round.ToString());
 
-            if (!Directory.Exists(engineLog))
-                Directory.CreateDirectory(engineLog);
+            if (!Directory.Exists(mapLocation))
+                Directory.CreateDirectory(mapLocation);
 
-            engineLog = Path.Combine(engineLog, "engine.log");
             mapLocation = Path.Combine(mapLocation, "map.txt");
             stateLocation = Path.Combine(stateLocation, "state.json");
             roundInfoLocation = Path.Combine(roundInfoLocation, "roundInfo.json");
 
-            if (File.Exists(engineLog))
-                File.Delete(engineLog);
             if (File.Exists(mapLocation))
                 File.Delete(mapLocation);
             if (File.Exists(stateLocation))
@@ -129,10 +126,24 @@ namespace Bomberman
             var map = renderer.RenderTextGameState();
             var roundInfo = GenerateRoundInfo(gameMap);
 
-            File.WriteAllText(engineLog, Logger.ReadAll(), new UTF8Encoding(false));
             File.WriteAllText(mapLocation, map.ToString(), new UTF8Encoding(false));
             File.WriteAllText(stateLocation, json.ToString(), new UTF8Encoding(false));
             File.WriteAllText(roundInfoLocation, roundInfo, new UTF8Encoding(false));
+        }
+
+        private void WriteEgineInfo(GameMap gameMap, int round)
+        {
+            var engineLog = Path.Combine(_runLocation, round.ToString());
+
+            if (!Directory.Exists(engineLog))
+                Directory.CreateDirectory(engineLog);
+
+            engineLog = Path.Combine(engineLog, "engine.log");
+
+            if (File.Exists(engineLog))
+                File.Delete(engineLog);
+
+            File.WriteAllText(engineLog, Logger.ReadAll(), new UTF8Encoding(false));
         }
 
         private string GenerateRoundInfo(GameMap gameMap)
@@ -165,7 +176,7 @@ namespace Bomberman
             };
         }
 
-        private Player LoadBot(String botLocation, String logLocation)
+        private Player LoadBot(String botLocation, String logLocation, bool noLimit, bool haltOnError)
         {
             try
             {
@@ -173,7 +184,7 @@ namespace Bomberman
 
                 Logger.LogInfo("Loaded bot " + botLocation);
 
-                return new BotHarness(botMeta, botLocation, logLocation);
+                return new BotHarness(botMeta, botLocation, logLocation, noLimit, haltOnError);
             }
             catch (Exception ex)
             {
