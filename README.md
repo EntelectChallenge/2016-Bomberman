@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version 1.2.1.
+The current release is version 1.2.2.
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
