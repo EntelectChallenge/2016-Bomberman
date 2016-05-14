@@ -23,7 +23,7 @@ namespace TestHarness.TestHarnesses.Bot.Runners
             
             processArgs = AddAdditionalRunArgs(processArgs);
 
-            return new ProcessHandler(botDir, ConvertProcessName(processName), ConvertProcessArgs(processName, processArgs), ParentHarness.Logger, true);
+            return new ProcessHandler(botDir, ConvertProcessName(processName), ConvertProcessArgs(botFile, processArgs), ParentHarness.Logger, true);
         }
 
         protected override void RunCalibrationTest()
