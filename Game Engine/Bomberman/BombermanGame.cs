@@ -52,7 +52,7 @@ namespace Bomberman
 
                 if (players.Count == 0)
                 {
-                    for (var i = 0; i < 4; i++)
+                    for (var i = 0; i < 2; i++)
                     {
                         players.Add(new ConsoleHarness("Player " + (players.Count + 1)));
                     }

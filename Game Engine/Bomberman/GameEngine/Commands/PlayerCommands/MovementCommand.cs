@@ -47,7 +47,7 @@ namespace GameEngine.Commands.PlayerCommands
             }
 
             var destinationBlock = gameMap.GetBlockAtLocation(destinationLocation.X, destinationLocation.Y);
-            if (destinationBlock.Entity != null)
+            if (destinationBlock.Entity != null && destinationBlock.Entity.GetType() != typeof(PlayerEntity))
             {
                 throw new InvalidCommandException(String.Format("Cannot move to {0}, {1} already occupies this space", destinationLocation, destinationBlock.Entity));
             }

@@ -131,6 +131,88 @@ namespace GameEnginetest.Tests
         }
 
         [Test]
+        public void TestPlayersAdjacentPlayersMovingInSameDirection()
+        {
+            var processor = new GameRoundProcessor(1, _gameMap, _logger);
+
+            var player1 = _players[0];
+            var player2 = _players[1];
+
+            MovePlayerToLocation(player1, 1, 1);
+            MovePlayerToLocation(player2, 2, 1);
+
+            processor.AddPlayerCommand(player1, new MovementCommand(MovementCommand.Direction.Right));
+            processor.AddPlayerCommand(player2, new MovementCommand(MovementCommand.Direction.Right));
+
+            processor.ProcessRound();
+
+            Assert.True(player1.PlayerEntity.Location.X == 2, "Player 1 should have moved");
+            Assert.True(player2.PlayerEntity.Location.X == 3, "Player 2 should have moved");
+        }
+
+        [Test]
+        public void TestPlayersAdjacentPlayersMovingInSameDirectionFail()
+        {
+            var processor = new GameRoundProcessor(1, _gameMap, _logger);
+
+            var player1 = _players[0];
+            var player2 = _players[1];
+
+            MovePlayerToLocation(player1, 1, 1);
+            MovePlayerToLocation(player2, 2, 1);
+
+            processor.AddPlayerCommand(player1, new MovementCommand(MovementCommand.Direction.Right));
+            processor.AddPlayerCommand(player2, new DoNothingCommand());
+
+            processor.ProcessRound();
+
+            Assert.True(player1.PlayerEntity.Location.X == 1, "Player 1 should not have moved");
+            Assert.True(player2.PlayerEntity.Location.X == 2, "Player 2 should not have moved");
+        }
+
+        [Test]
+        public void TestPlayersAdjacentPlayersMovingTowardsEachOther()
+        {
+            var processor = new GameRoundProcessor(1, _gameMap, _logger);
+
+            var player1 = _players[0];
+            var player2 = _players[1];
+
+            MovePlayerToLocation(player1, 1, 1);
+            MovePlayerToLocation(player2, 2, 1);
+
+            processor.AddPlayerCommand(player1, new MovementCommand(MovementCommand.Direction.Right));
+            processor.AddPlayerCommand(player2, new MovementCommand(MovementCommand.Direction.Left));
+
+            processor.ProcessRound();
+
+            Assert.True(player1.PlayerEntity.Location.X == 1, "Player 1 should not have moved");
+            Assert.True(player2.PlayerEntity.Location.X == 2, "Player 2 should not have moved");
+        }
+
+        [Test]
+        public void TestPlayerMovingIntoWall()
+        {
+            var processor = new GameRoundProcessor(1, _gameMap, _logger);
+
+            var player1 = _players[0];
+            var player2 = _players[1];
+
+            MovePlayerToLocation(player1, 1, 1);
+            MovePlayerToLocation(player2, 2, 1);
+
+            _gameMap.GetBlockAtLocation(3, 1).SetEntity(new IndestructibleWallEntity());
+
+            processor.AddPlayerCommand(player1, new MovementCommand(MovementCommand.Direction.Right));
+            processor.AddPlayerCommand(player2, new MovementCommand(MovementCommand.Direction.Right));
+
+            processor.ProcessRound();
+
+            Assert.True(player1.PlayerEntity.Location.X == 1, "Player 1 should not have moved");
+            Assert.True(player2.PlayerEntity.Location.X == 2, "Player 2 should not have moved");
+        }
+
+        [Test]
         public void TestBombChaining()
         {
             var processor = new GameRoundProcessor(1, _gameMap, _logger);

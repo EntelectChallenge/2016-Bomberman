@@ -78,12 +78,24 @@ namespace GameEngine.Commands
         public void ProcessCommands(GameMap gameMap)
         {
             ValidateCommands(gameMap);
-            foreach (var playerMovementDestination in _playerMovementDestinations)
+
+            while (_playerMovementDestinations.Any())
             {
+                var playerMovementDestination = _playerMovementDestinations.OrderBy(x => x.Value.Entity != null).First();
+                _playerMovementDestinations.Remove(playerMovementDestination.Key);
+
+                _logger.LogInfo(String.Format("Trying to move player {0} to destination {1}", playerMovementDestination.Key.Key, playerMovementDestination.Value.Location));
+
                 var player = playerMovementDestination.Key;
                 var playerLocation = player.Location;
                 var playerBlock = gameMap.GetBlockAtLocation(playerLocation.X, playerLocation.Y);
                 var destinationBlock = playerMovementDestination.Value;
+
+                if (destinationBlock.Entity != null)
+                {
+                    _logger.LogException(String.Format("Could not move player {0} to destination {1} because another entity occupies this space", playerMovementDestination.Key.Key, playerMovementDestination.Value.Location));
+                    continue;
+                }
 
                 playerBlock.SetEntity(null);
                 destinationBlock.SetEntity(player);
