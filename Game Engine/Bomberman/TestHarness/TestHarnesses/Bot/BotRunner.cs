@@ -57,7 +57,7 @@ namespace TestHarness.TestHarnesses.Bot
                     {
                         handler.ProcessToRun.ErrorDataReceived += (sender, args) =>
                         {
-                            _errorLogged = true;
+                            _errorLogged = _errorLogged || !String.IsNullOrEmpty(args.Data);
                         };
                     }
 
@@ -69,7 +69,7 @@ namespace TestHarness.TestHarnesses.Bot
 
                     ParentHarness.Logger.LogInfo("Your bots total execution time was " + sw.Elapsed);
 
-                    if (ParentHarness.HaltOnError)
+                    if (ParentHarness.HaltOnError && _errorLogged)
                     {
                         Console.WriteLine("Bot encountered an error, press any key to continue");
                         Console.ReadKey();
