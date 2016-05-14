@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version 1.2.2.
+The current release is version [1.2.3](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest).
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
@@ -27,7 +27,7 @@ Improvements and enhancements may be made to the game engine code over time, but
 The game engine has been made available to the community for peer review and bug fixes, so if you find any bugs or have any concerns, please e-mail challenge@entelect.co.za, discuss it with us on the [Challenge forum](http://forum.entelect.co.za/) or submit a pull request on Github.
 
 ## Usage
-The easiest way to start using the game engine is to download the [binary release zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.2/Game.Engine.v1.2.2.zip). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
+The easiest way to start using the game engine is to download the [Game Engine zip](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest). You will also need the .NET framework if you don't have it installed already - you can get the offline installer for [.NET Framework here](http://www.microsoft.com/en-za/download/details.aspx?id=40779).
 
 Once you have installed .NET and downloaded the binary release zip file, extract it and open a new Command Prompt in the Binaries/{version}/Game Engine folder.
 
@@ -69,7 +69,7 @@ You might have to change the configurate file depending on your system in order 
 
 We have changed things a bit this year when it comes to compiling and running the bot.  You will not longer be able to include a run.bat and compile.bat file, the system will do that for you based on your bot meta you included.  One of the reasons we decided to go this route is in order to add additional features to the game engine for instance running calibration bots.
 
-Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/download/V1.2.2/Sample.Bots.zip)
+Sample bot project files can be downloaded [here.](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest)
 
 The game engine requires that you have `bot.json` file.  This will tell the game engine how to compile and run your bot.  The file must contain the following:
 
@@ -314,6 +314,17 @@ Players will collect points during game play.  Points will be used (along with o
 6. The round in which a player is killed will cause the player to forfeit all points earned in that round, and the player will lose points equal to the points earned when killing another player.
 
 ## Release Notes
+
+### Version 1.2.3 - 14 May 2016
+Change Log:
+
+1. Fixed a bug with the debug command not working as intended and thinking the bot failed on every round
+2. Fixed a bug where the Game Engine did not evaluate player movements correctly in some scenarios, such as two adjacent players moving in the same direction.
+
+How will this affect me?
+
+1. The debug command should now work correctly.  Just ensure your bot writes to the error stream.
+2. Should not have any affect on your bot.
 
 ### Version 1.2.2 - 07 May 2016
 Change Log:
