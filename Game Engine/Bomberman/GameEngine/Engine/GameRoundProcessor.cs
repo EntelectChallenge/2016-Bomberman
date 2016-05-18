@@ -179,9 +179,13 @@ namespace GameEngine.Engine
         protected void DetonateBomb(BombEntity bombEntity)
         {
             _logger.LogInfo(String.Format("Detonating Bomb {0}", bombEntity));
+            _bombGraph.AddNode(bombEntity);
+
+            if (bombEntity.IsExploding)
+                return;
+
             bombEntity.IsExploding = true;
 
-            _bombGraph.AddNode(bombEntity);
             var bombX = bombEntity.Location.X;
             var bombY = bombEntity.Location.Y;
             var bombRaduis = bombEntity.BombRadius;
@@ -241,10 +245,11 @@ namespace GameEngine.Engine
             {
                 gameBlock.ExplodingBombs.Add(bomb);
             }
-            if (gameBlock.Bomb != null && !gameBlock.Bomb.IsExploding)
+            if (gameBlock.Bomb != null && gameBlock.Bomb != bomb)
             {
                 DetonateBomb(gameBlock.Bomb);
                 _bombGraph.ConnectNodes(bomb, gameBlock.Bomb);
+                return false;
             }
             if (gameBlock.Entity != null)
             {

@@ -23,7 +23,7 @@ namespace GameEngine.Engine.Graphs
 
             if (aliveEntities.Any())
             {
-                var pointsPerPlayer = _totalPoints / aliveEntities.Count();
+                var pointsPerPlayer = _totalPoints;
                 foreach (var playerEntity in aliveEntities)
                 {
                     playerEntity.AddPoints(pointsPerPlayer);

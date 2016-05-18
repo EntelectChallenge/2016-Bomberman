@@ -16,7 +16,8 @@ namespace GameEngine.Engine.Graphs
 
         public void AddNode(T node)
         {
-            NodeSet.Add(new GraphNode<T>(node));
+            if (FindNode(node) == null)
+                NodeSet.Add(new GraphNode<T>(node));
         }
 
         public void ConnectNodes(T from, T to)

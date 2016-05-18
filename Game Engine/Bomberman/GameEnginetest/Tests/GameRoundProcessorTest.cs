@@ -250,6 +250,15 @@ namespace GameEnginetest.Tests
         [Test]
         public void TwoBombsSameEntity()
         {
+            /* #######
+             * #     #
+             * #     #
+             * # a+b #
+             * #     #
+             * #     #
+             * #######
+             */
+
             var block = _gameMap.GetBlockAtLocation(3, 3);
             block.SetEntity(new DestructibleWallEntity());
 
@@ -340,6 +349,14 @@ namespace GameEnginetest.Tests
         [Test]
         public void ChainBombPointAllocations()
         {
+            /* #######
+             * #  +  #
+             * #  a  #
+             * #     #
+             * #     #
+             * #  b  #
+             * #######
+             */
             var block = _gameMap.GetBlockAtLocation(1, 3);
             block.SetEntity(new DestructibleWallEntity());
 
@@ -388,7 +405,7 @@ namespace GameEnginetest.Tests
             // 
             //   1
             // 
-            // 20 points.
+            // 10 points.
 
             var block = _gameMap.GetBlockAtLocation(1, 3);
             block.SetEntity(new DestructibleWallEntity());
@@ -425,7 +442,7 @@ namespace GameEnginetest.Tests
             processor = new GameRoundProcessor(1, _gameMap, _logger);
             processor.ProcessRound();
 
-            Assert.AreEqual(20, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
+            Assert.AreEqual(10, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
         }
 
         [Test]
@@ -437,7 +454,7 @@ namespace GameEnginetest.Tests
             // 
             //   +
             // 
-            // 40 points.
+            // 30 points.
 
             var player2 = _players[1];
             MovePlayerToLocation(player2, 2, 2);
@@ -474,7 +491,7 @@ namespace GameEnginetest.Tests
             processor = new GameRoundProcessor(1, _gameMap, _logger);
             processor.ProcessRound();
 
-            Assert.AreEqual(40, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
+            Assert.AreEqual(30, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
         }
 
         [Test]
@@ -486,7 +503,7 @@ namespace GameEnginetest.Tests
             // 
             //   +
             // 
-            // 40 points.
+            // 30 points.
 
             var player2 = _players[1];
             MovePlayerToLocation(player2, 2, 2);
@@ -523,7 +540,7 @@ namespace GameEnginetest.Tests
             processor = new GameRoundProcessor(1, _gameMap, _logger);
             processor.ProcessRound();
 
-            Assert.AreEqual(40, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
+            Assert.AreEqual(30, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
         }
 
         [Test]
@@ -535,7 +552,7 @@ namespace GameEnginetest.Tests
             // 
             //   +
             // 
-            // 50 points.
+            // 30 points.
 
             var player2 = _players[1];
             MovePlayerToLocation(player2, 2, 2);
@@ -578,7 +595,7 @@ namespace GameEnginetest.Tests
             processor = new GameRoundProcessor(1, _gameMap, _logger);
             processor.ProcessRound();
 
-            Assert.AreEqual(50, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
+            Assert.AreEqual(30, player1.PlayerEntity.Points - player1.PlayerEntity.MapCoveragePoints, "Player 1 should have received points for destroying wall");
         }
 
         [Test]
