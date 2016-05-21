@@ -71,7 +71,7 @@ namespace TestHarness.TestHarnesses.Bot
 
                     if (ParentHarness.HaltOnError && _errorLogged)
                     {
-                        Console.WriteLine("Bot encountered an error, press any key to continue");
+                        Console.WriteLine(String.Format("Bot {0} encountered an error, press any key to continue", ParentHarness.PlayerEntity.Key));
                         Console.ReadKey();
                     }
                 }
