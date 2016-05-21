@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version [1.2.3](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest).
+The current release is version [1.2.4](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest).
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
@@ -314,6 +314,19 @@ Players will collect points during game play.  Points will be used (along with o
 6. The round in which a player is killed will cause the player to forfeit all points earned in that round, and the player will lose points equal to the points earned when killing another player.
 
 ## Release Notes
+
+### Version 1.2.3 - 21 May 2016
+Change Log:
+
+1. Fixed a bug where bomb blasts would continue past other bombs, instead of just triggering them and then stopping as discussed in [this thread](http://forum.entelect.co.za/thread/bomb-blasts/)
+2. Fixed a bug with the calculation of points in a bomb chain, as discussed in [this thread](http://forum.entelect.co.za/thread/bomb-behavior-discussion-for-members/)
+3.  Include the Key of the bot that failed when running the game engine in debug mode
+
+How will this affect me?
+
+1. Your but will have to make provision for this scenario occuring, for instance a bomb with a range of 8 hitting a bomb with a range of 1 will trigger the bomb, stop and not continue.  So if the 1 range bomb was 3 blocks away, the effective bomb blast will only be of range 4.  This does sound unintuitive but I think it will make some really nice strategies like blocking you opponent from gaining points.
+2. If your bade made certain move decisions based on points, and you were working on the incorrect point calculations you will have to update your bot to work with the correct point calculations.
+3. Will help you identify the bot that encountered the error
 
 ### Version 1.2.3 - 14 May 2016
 Change Log:
