@@ -20,14 +20,15 @@ namespace GameEngine.Engine
     {
         public delegate void GameStartedHandler(GameMap gameMap);
         public delegate void RoundCompleteHandler(GameMap gameMap, int round);
+        public delegate void RoundStartingHandler(GameMap gameMap, int round);
         public delegate void GameCompleteHandler(GameMap gameMap, List<Player> leaderBoard);
 
         public event GameStartedHandler GameStarted;
         public event RoundCompleteHandler RoundComplete;
+        public event RoundStartingHandler RoundStarting;
         public event GameCompleteHandler GameComplete;
 
         public ILogger _logger = new NullLogger();
-        private int _currentRound;
         private GameMap _gameMap;
         private List<Player> _players;
         private GameRoundProcessor _roundProcessor;
@@ -44,7 +45,6 @@ namespace GameEngine.Engine
             _gameMap = (new GameMapGenerator(players)).GenerateGameMap(seed);
 
             _players = players;
-            _currentRound = 0;
 
             foreach (var player in _players)
             {
@@ -140,7 +140,16 @@ namespace GameEngine.Engine
         private void PublishRoundComplete()
         {
             if (RoundComplete != null)
-                RoundComplete(_gameMap, _currentRound);
+                RoundComplete(_gameMap, _gameMap.CurrentRound);
+        }
+
+        /// <summary>
+        /// Notify all listeners that the current game round is starting
+        /// </summary>
+        private void PublishRoundStarting()
+        {
+            if (RoundStarting != null)
+                RoundStarting(_gameMap, _gameMap.CurrentRound);
         }
 
         /// <summary>
@@ -179,10 +188,11 @@ namespace GameEngine.Engine
 
             foreach (var player in _players)
             {
-                player.RoundComplete(_gameMap, _currentRound);
+                player.RoundComplete(_gameMap, _gameMap.CurrentRound);
             }
 
             PublishRoundComplete();
+            _gameMap.CurrentRound++;
             StartNewRound();
 
             if (_gameMap.RegisteredPlayerEntities.Count(x => !x.Killed) < 2)
@@ -191,7 +201,7 @@ namespace GameEngine.Engine
                 return;
             }
 
-            if (_currentRound > (_gameMap.MapHeight*_gameMap.MapWidth))
+            if (_gameMap.CurrentRound > (_gameMap.MapHeight*_gameMap.MapWidth))
             {
                 PublishGameComplete();
                 return;
@@ -210,9 +220,8 @@ namespace GameEngine.Engine
                 player.PlayerKilled(_gameMap);
             }
 
-            _currentRound++;
-            _roundProcessor = new GameRoundProcessor(_currentRound, _gameMap, Logger, _playerKillPoints);
-            _gameMap.CurrentRound = _currentRound;
+            _roundProcessor = new GameRoundProcessor(_gameMap.CurrentRound, _gameMap, Logger, _playerKillPoints);
+            PublishRoundStarting();
         }
 
         public ILogger Logger

@@ -32,12 +32,12 @@ namespace Bomberman
             {
                 _engine = new BombermanEngine { Logger = Logger };
                 _engine.GameComplete += EngineOnGameComplete;
-                _engine.RoundComplete += WriteStateFiles;
-                _engine.RoundComplete += (gameState, round) => WriteEgineInfo(gameState, round - 1);
+                _engine.RoundStarting += WriteStateFiles;
+                _engine.RoundComplete += WriteEgineInfo;
 
                 if (options.Pretty)
                 {
-                    _engine.RoundComplete += engine_RoundComplete;
+                    _engine.RoundStarting += engine_RoundComplete;
                     _engine.GameStarted += EngineOnGameStarted;
                 }
 
@@ -65,7 +65,7 @@ namespace Bomberman
 
                 _engine.PrepareGame(players, gameSeed);
 
-                WriteStateFiles(_engine.GetGameState(), 0);
+                //WriteStateFiles(_engine.GetGameState(), 0);
                 _engine.StartNewGame();
             }
             catch (Exception ex)
