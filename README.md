@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version [1.2.4](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest).
+The current release is version [1.2.5](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest).
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
@@ -315,7 +315,16 @@ Players will collect points during game play.  Points will be used (along with o
 
 ## Release Notes
 
-### Version 1.2.3 - 21 May 2016
+### Version 1.2.5 - 08 Jun 2016
+Change Log:
+
+1. Fixed a bug where the game engine would incorrectly increase the game map round number at the start of a game, leading to incorrect round numbers for the first two rounds.
+
+How will this affect me?
+
+1. If you had logic to check for the start of the game based on round number you might have to verify that it still works correctly.  Game's will always start with a round number of 0.
+
+### Version 1.2.4 - 21 May 2016
 Change Log:
 
 1. Fixed a bug where bomb blasts would continue past other bombs, instead of just triggering them and then stopping as discussed in [this thread](http://forum.entelect.co.za/thread/bomb-blasts/)
