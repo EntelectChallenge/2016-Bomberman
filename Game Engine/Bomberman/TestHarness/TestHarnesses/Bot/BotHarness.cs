@@ -73,6 +73,8 @@ namespace TestHarness.TestHarnesses.Bot
 
         public override void NewRoundStarted(GameMap gameState)
         {
+            _currentRound = gameState.CurrentRound;
+            WriteRoundFiles(gameState);
             if (!PlayerEntity.Killed)
             {
                 RunBotAndGetNextMove();
@@ -83,9 +85,7 @@ namespace TestHarness.TestHarnesses.Bot
         {
             base.RoundComplete(gameMap, round);
 
-            _currentRound = round;
-            ClearPreviousRoundFiles();
-            WriteRoundFiles(gameMap);
+            ClearRoundFiles();
         }
 
         public override void GameEnded(GameMap gameMap)
@@ -157,14 +157,14 @@ namespace TestHarness.TestHarnesses.Bot
             PublishCommand(command);
         }
 
-        private void ClearPreviousRoundFiles()
+        private void ClearRoundFiles()
         {
-            var dir = Path.Combine(PreviousWorkingDirectory, Settings.Default.StateFileName);
+            var dir = Path.Combine(CurrentWorkingDirectory, Settings.Default.StateFileName);
 
             if(File.Exists(dir))
                 File.Delete(dir);
 
-            dir = Path.Combine(PreviousWorkingDirectory, Settings.Default.MapFileName);
+            dir = Path.Combine(CurrentWorkingDirectory, Settings.Default.MapFileName);
 
             if (File.Exists(dir))
                 File.Delete(dir);
@@ -231,15 +231,6 @@ namespace TestHarness.TestHarnesses.Bot
             get
             {
                 var roundPath = Path.Combine(WorkDir, _currentRound.ToString(CultureInfo.InvariantCulture));
-                return Path.Combine(roundPath, PlayerEntity.Key.ToString(CultureInfo.InvariantCulture));
-            }
-        }
-
-        public string PreviousWorkingDirectory
-        {
-            get
-            {
-                var roundPath = Path.Combine(WorkDir, (_currentRound - 1).ToString(CultureInfo.InvariantCulture));
                 return Path.Combine(roundPath, PlayerEntity.Key.ToString(CultureInfo.InvariantCulture));
             }
         }
