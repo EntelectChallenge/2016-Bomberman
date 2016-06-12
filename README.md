@@ -1,6 +1,6 @@
 # 2016-Bomberman
 
-The current release is version [1.2.5](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest).
+The current release is version [1.2.6](https://github.com/EntelectChallenge/2016-Bomberman/releases/latest).
 
 For more information about the challenge see the [Challenge website](http://challenge.entelect.co.za/) .
 
@@ -314,6 +314,15 @@ Players will collect points during game play.  Points will be used (along with o
 6. The round in which a player is killed will cause the player to forfeit all points earned in that round, and the player will lose points equal to the points earned when killing another player.
 
 ## Release Notes
+
+### Version 1.2.6 - 12 Jun 2016
+Change Log:
+
+1. Fixed a bug where the game engine would incorrectly increase the game map round number at the start of a game, leading to incorrect round numbers for the first two rounds.
+
+How will this affect me?
+
+1. Should not have an effect on your bot.
 
 ### Version 1.2.5 - 08 Jun 2016
 Change Log:
