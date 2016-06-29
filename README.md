@@ -238,6 +238,7 @@ Players can either be console players or bots.  Both follow the same game engine
   6. Bot players that post more than 20 do nothing commands in a row will automatically place a bomb to kill themselves in an attempt to save the game
   7. Players must ensure that the bot process exits gracefully within the allotted time. No child processes will be allowed.
   8. All bot logic processing must be done within the source code submitted for your bot.  You may not use network calls such as web services to aid in your bots decision making.
+  9. The Nickname used on the `bot meta` file is used in the `map.txt` file, for this reason you will only be allowed alphanumeric characters as your nick name, and no special characters such as `Carriage Return`, `Line Feed` and `New Line` will not be allowed.
 
 ### Game Engine Rules
 
