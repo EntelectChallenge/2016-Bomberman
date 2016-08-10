@@ -272,7 +272,7 @@ The following rules describe how the game engine will run and process the game
   9. Remove marked (Killed/Destroyed) entities from the map
   10. Apply player movement bonus
 5. A player entity will not able to move to a space containing another entity, with the exception of power ups.
-6. A player can only plant a bomb if they have bombs available in their bomb bag.  Planting a bomb removes a bomb from the bomb bag and will be returned once a bomb explodes.
+6. A player can only plant a bomb if they have bombs available in their bomb bag.  Planting a bomb removes a bomb from the bomb bag and will be returned at the end of the round in which it explodes.
 7. Two player entities will not be able to move onto the same space during a round, if this does happen the game engine will randomly choose a player whose move will be discarded.
 8. Bombs will start with a timer based on the players current bomb bag. The formula is (bombag size * 3) + 1.  The bomb timers will be capped to 10.
 9. Bomb timers will decrease by 1 every round.
