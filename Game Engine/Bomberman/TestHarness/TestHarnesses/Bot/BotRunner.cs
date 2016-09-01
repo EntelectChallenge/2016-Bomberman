@@ -46,7 +46,7 @@ namespace TestHarness.TestHarnesses.Bot
         {
             using (var handler = CreateProcessHandler())
             {
-                var sw = new Stopwatch();
+                double runTime = 0;
                 try
                 {
                     handler.LimitExecutionTime = ParentHarness.EnforceTimeLimit;
@@ -63,11 +63,11 @@ namespace TestHarness.TestHarnesses.Bot
 
                     ParentHarness.Logger.LogDebug(String.Format("Executing bot with following commands {0} {1}", handler.ProcessToRun.StartInfo.FileName, handler.ProcessToRun.StartInfo.Arguments));
 
-                    sw.Start();
                     handler.RunProcess();
-                    sw.Stop();
+                    Thread.Sleep(4000);
+                    runTime = (handler.ProcessToRun.ExitTime - handler.ProcessToRun.StartTime).TotalMilliseconds;
 
-                    ParentHarness.Logger.LogInfo("Your bots total execution time was " + sw.Elapsed);
+                    ParentHarness.Logger.LogInfo("Your bots total execution time was " + TimeSpan.FromMilliseconds(runTime));
 
                     if (ParentHarness.HaltOnError && _errorLogged)
                     {
@@ -80,10 +80,10 @@ namespace TestHarness.TestHarnesses.Bot
                     ParentHarness.Logger.LogException("Failure while executing bot " + handler.ProcessToRun.StartInfo.FileName + " " + handler.ProcessToRun.StartInfo.Arguments, ex);
                 }
 
-                if (ParentHarness.EnforceTimeLimit && sw.Elapsed >= MaxRunTime)
+                if (ParentHarness.EnforceTimeLimit && runTime >= MaxRunTime.TotalMilliseconds)
                 {
                     ParentHarness.Logger.LogInfo("Your bot exceeded the maximum execution time");
-                    throw new TimeLimitExceededException("Time limit exceeded by " + (sw.Elapsed - MaxRunTime));
+                    throw new TimeLimitExceededException("Time limit exceeded by " + (MaxRunTime.Subtract(TimeSpan.FromMilliseconds(runTime))));
                 }
             }
         }
